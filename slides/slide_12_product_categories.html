@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        @font-face {
+            font-family: 'Cairo';
+            src: url('/home/ubuntu/wb_nutrition_strategy/slides/fonts/cairo-regular.ttf') format('truetype');
+            font-weight: 400;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Cairo';
+            src: url('/home/ubuntu/wb_nutrition_strategy/slides/fonts/cairo-bold.ttf') format('truetype');
+            font-weight: 700;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Lato';
+            src: url('/home/ubuntu/wb_nutrition_strategy/slides/fonts/lato-regular.ttf') format('truetype');
+            font-weight: 400;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Lato';
+            src: url('/home/ubuntu/wb_nutrition_strategy/slides/fonts/lato-bold.ttf') format('truetype');
+            font-weight: 700;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Lato';
+            src: url('/home/ubuntu/wb_nutrition_strategy/slides/fonts/lato-light.ttf') format('truetype');
+            font-weight: 300;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Playfair Display';
+            src: url('/home/ubuntu/wb_nutrition_strategy/slides/fonts/playfair-regular.ttf') format('truetype');
+            font-weight: 400;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Playfair Display';
+            src: url('/home/ubuntu/wb_nutrition_strategy/slides/fonts/playfair-regular.ttf') format('truetype');
+            font-weight: 700;
+            font-style: normal;
+        }
+        
+        
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { overflow: hidden; }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            background-color: #F9F7F2;
+            position: relative;
+            font-family: 'Lato', sans-serif;
+            color: #1A1A1A;
+            padding: 80px 40px 40px; /* keep top padding, reduce sides & bottom */
+            display: flex;
+            flex-direction: column;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 30px; /* reduced to save vertical space */
+        }
+
+        .subtitle {
+            font-family: 'Lato', sans-serif;
+            font-size: 16px;
+            color: #C67D63;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 48px;
+            color: #1A1A1A;
+            margin-bottom: 10px; /* reduced */
+        }
+
+        .table-container {
+            width: 100%;
+            flex-grow: 1;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: right;
+        }
+
+        th {
+            font-family: 'Playfair Display', serif;
+            font-size: 24px;
+            color: #1A1A1A;
+            font-weight: 700;
+            padding: 12px; /* reduced */
+            border-bottom: 2px solid #1A1A1A;
+        }
+
+        td {
+            font-family: 'Lato', sans-serif;
+            font-size: 20px;
+            color: #4A4A4A;
+            padding: 12px 14px; /* reduced vertical padding */
+            border-bottom: 1px solid #ddd;
+            vertical-align: middle;
+        }
+
+        /* Highlight the Margin column */
+        td:last-child {
+            font-family: 'Playfair Display', serif;
+            font-size: 28px;
+            color: #C67D63;
+            font-weight: 700;
+        }
+
+        .category-icon {
+            color: #C67D63;
+            margin-left: 12px;
+            width: 28px;
+            text-align: center;
+        }
+
+        .category-name {
+            font-weight: 700;
+            color: #1A1A1A;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="header">
+            <span class="subtitle">Product Categories</span>
+            <h1>فئات المنتجات وهوامش الربح</h1>
+        </div>
+
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th width="30%">الفئة</th>
+                        <th width="35%">المنتجات الرئيسية</th>
+                        <th width="20%">الشريحة المستهدفة</th>
+                        <th width="15%">هامش الربح</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <i class="fas fa-spa category-icon"></i>
+                            <span class="category-name">مكملات الجمال</span>
+                        </td>
+                        <td>كولاجين، بيوتين، حمض الهيالورونيك</td>
+                        <td>النساء 25-45</td>
+                        <td>45-55%</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <i class="fas fa-weight category-icon"></i>
+                            <span class="category-name">إدارة الوزن</span>
+                        </td>
+                        <td>حارقات دهون طبيعية، مثبطات الشهية</td>
+                        <td>الجميع 25-45</td>
+                        <td>40-50%</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <i class="fas fa-heartbeat category-icon"></i>
+                            <span class="category-name">الصحة العامة</span>
+                        </td>
+                        <td>ملتي فيتامين، أوميغا 3، فيتامين د</td>
+                        <td>جميع الشرائح</td>
+                        <td>35-45%</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <i class="fas fa-dumbbell category-icon"></i>
+                            <span class="category-name">التغذية الرياضية</span>
+                        </td>
+                        <td>بروتين، BCAA، كرياتين</td>
+                        <td>الرياضيون</td>
+                        <td>30-40%</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        @font-face {
+            font-family: 'Cairo';
+            src: url('/home/ubuntu/wb_nutrition_strategy/slides/fonts/cairo-regular.ttf') format('truetype');
+            font-weight: 400;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Cairo';
+            src: url('/home/ubuntu/wb_nutrition_strategy/slides/fonts/cairo-bold.ttf') format('truetype');
+            font-weight: 700;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Lato';
+            src: url('/home/ubuntu/wb_nutrition_strategy/slides/fonts/lato-regular.ttf') format('truetype');
+            font-weight: 400;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Lato';
+            src: url('/home/ubuntu/wb_nutrition_strategy/slides/fonts/lato-bold.ttf') format('truetype');
+            font-weight: 700;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Lato';
+            src: url('/home/ubuntu/wb_nutrition_strategy/slides/fonts/lato-light.ttf') format('truetype');
+            font-weight: 300;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Playfair Display';
+            src: url('/home/ubuntu/wb_nutrition_strategy/slides/fonts/playfair-regular.ttf') format('truetype');
+            font-weight: 400;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Playfair Display';
+            src: url('/home/ubuntu/wb_nutrition_strategy/slides/fonts/playfair-regular.ttf') format('truetype');
+            font-weight: 700;
+            font-style: normal;
+        }
+    </style>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { overflow: hidden; }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            background-color: #F9F7F2;
+            position: relative;
+            font-family: 'Lato', 'Cairo', sans-serif;
+            color: #1A1A1A;
+            padding: 60px 80px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Subtle Background Pattern */
+        .slide-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 10px;
+            background: repeating-linear-gradient(
+                45deg,
+                #C67D63,
+                #C67D63 10px,
+                #F9F7F2 10px,
+                #F9F7F2 20px
+            );
+            opacity: 0.3;
+        }
+
+        .header {
+            margin-bottom: 50px;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 20px;
+        }
+
+        .subtitle {
+            font-family: 'Lato', sans-serif;
+            font-size: 18px;
+            color: #C67D63;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        h1 {
+            font-family: 'Lato', 'Cairo', sans-serif;
+            font-size: 48px;
+            color: #1A1A1A;
+            font-weight: 700;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            flex-grow: 1;
+        }
+
+        .point-card {
+            padding: 20px 0;
+        }
+
+        .point-icon-svg {
+            width: 32px;
+            height: 32px;
+            fill: #C67D63;
+            margin-bottom: 15px;
+        }
+
+        .point-title {
+            font-family: 'Lato', 'Cairo', sans-serif;
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #1A1A1A;
+            font-weight: 700;
+        }
+
+        .point-desc {
+            font-family: 'Lato', 'Cairo', sans-serif;
+            font-size: 18px;
+            line-height: 1.6;
+            color: #4A4A4A;
+        }
+
+        .highlight-box {
+            background-color: #fff;
+            border: 1px solid #e0e0e0;
+            padding: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 20px;
+            border-right: 5px solid #C67D63;
+        }
+
+        .highlight-text {
+            font-family: 'Lato', 'Cairo', sans-serif;
+            font-size: 20px;
+            color: #4A4A4A;
+        }
+
+        .highlight-number {
+            font-family: 'Playfair Display', serif;
+            font-size: 48px;
+            color: #C67D63;
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="header">
+            <span class="subtitle">Executive Summary</span>
+            <h1>الفرصة الاستثنائية أمامنا</h1>
+        </div>
+
+        <div class="content-grid">
+            <div class="left-col">
+                <div class="point-card">
+                    <!-- Chart Line SVG -->
+                    <svg class="point-icon-svg" viewBox="0 0 512 512"><path d="M64 64c0-17.7-14.3-32-32-32S0 46.3 0 64V400c0 44.2 35.8 80 80 80H480c17.7 0 32-14.3 32-32s-14.3-32-32-32H80c-8.8 0-16-7.2-16-16V64zm406.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L320 210.7l-57.4-57.4c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L240 221.3l57.4 57.4c12.5 12.5 32.8 12.5 45.3 0l128-128z"/></svg>
+                    <h3 class="point-title">نمو هائل في السوق</h3>
+                    <p class="point-desc">سوق المكملات الغذائية في الشرق الأوسط يبلغ 4.10 مليار دولار بنمو سنوي مركب 10.3%، مما يشير إلى طلب متزايد وفرص واعدة.</p>
+                </div>
+                <div class="point-card">
+                    <!-- Puzzle Piece SVG -->
+                    <svg class="point-icon-svg" viewBox="0 0 512 512"><path d="M192 104.8c0-9.2-5.8-17.3-13.2-22.8C167.2 73.3 160 61.3 160 48c0-26.5 28.7-48 64-48s64 21.5 64 48c0 13.3-7.2 25.3-18.8 34c-7.4 5.5-13.2 13.6-13.2 22.8c0 12.8 10.4 23.2 23.2 23.2H384c35.3 0 64 28.7 64 64v80.8c0 12.8 10.4 23.2 23.2 23.2c9.2 0 17.3-5.8 22.8-13.2c8.7-11.6 20.7-18.8 34-18.8c26.5 0 48 28.7 48 64s-21.5 64-48 64c-13.3 0-25.3-7.2-34-18.8c-5.5-7.4-13.6-13.2-22.8-13.2c-12.8 0-23.2 10.4-23.2 23.2V464c0 26.5-21.5 48-48 48H279.2c-12.8 0-23.2-10.4-23.2-23.2c0-9.2 5.8-17.3 13.2-22.8c11.6-8.7 18.8-20.7 18.8-34c0-26.5-28.7-48-64-48s-64 21.5-64 48c0 13.3 7.2 25.3 18.8 34c7.4 5.5 13.2 13.6 13.2 22.8c0 12.8-10.4 23.2-23.2 23.2H48c-26.5 0-48-21.5-48-48V343.2C0 330.4 10.4 320 23.2 320c9.2 0 17.3 5.8 22.8 13.2C54.7 344.8 66.7 352 80 352c26.5 0 48-28.7 48-64s-21.5-64-48-64c-13.3 0-25.3 7.2-34 18.8C40.5 250.2 32.4 256 23.2 256C10.4 256 0 245.6 0 232.8V152c0-26.5 21.5-48 48-48H168.8c12.8 0 23.2-10.4 23.2-23.2z"/></svg>
+                    <h3 class="point-title">فجوة السوق العراقي</h3>
+                    <p class="point-desc">غياب منصة موثوقة تجمع بين المنتجات عالية الجودة والاستشارات المتخصصة، مما يترك المستهلكين في حيرة.</p>
+                </div>
+            </div>
+            <div class="right-col">
+                <div class="point-card">
+                    <!-- Gem SVG -->
+                    <svg class="point-icon-svg" viewBox="0 0 512 512"><path d="M116.7 33.8c4.5-6.1 11.7-9.8 19.3-9.8H376c7.6 0 14.8 3.6 19.3 9.8l111.4 152.3c6.8 9.3 6.1 22-1.7 30.5L287.3 455.9c-8.4 9.1-22.2 9.1-30.6 0L38.9 216.6c-7.8-8.5-8.5-21.2-1.7-30.5L116.7 33.8z"/></svg>
+                    <h3 class="point-title">ميزة Wonder Beauties</h3>
+                    <p class="point-desc">تمتلك المنصة البنية التحتية اللوجستية والتقنية، بالإضافة إلى قاعدة عملاء مثالية للتوسع في هذا القطاع الجديد.</p>
+                </div>
+                
+                <div class="highlight-box">
+                    <div class="highlight-text">
+                        <strong>الهدف المالي الرئيسي</strong><br>
+                        صافي مبيعات بحلول نهاية 2028
+                    </div>
+                    <div class="highlight-number">$15M</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

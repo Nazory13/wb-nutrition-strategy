@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        @font-face {
+            font-family: 'Cairo';
+            src: url('/home/ubuntu/wb_nutrition_strategy/slides/fonts/cairo-regular.ttf') format('truetype');
+            font-weight: 400;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Cairo';
+            src: url('/home/ubuntu/wb_nutrition_strategy/slides/fonts/cairo-bold.ttf') format('truetype');
+            font-weight: 700;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Lato';
+            src: url('/home/ubuntu/wb_nutrition_strategy/slides/fonts/lato-regular.ttf') format('truetype');
+            font-weight: 400;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Lato';
+            src: url('/home/ubuntu/wb_nutrition_strategy/slides/fonts/lato-bold.ttf') format('truetype');
+            font-weight: 700;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Lato';
+            src: url('/home/ubuntu/wb_nutrition_strategy/slides/fonts/lato-light.ttf') format('truetype');
+            font-weight: 300;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Playfair Display';
+            src: url('/home/ubuntu/wb_nutrition_strategy/slides/fonts/playfair-regular.ttf') format('truetype');
+            font-weight: 400;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Playfair Display';
+            src: url('/home/ubuntu/wb_nutrition_strategy/slides/fonts/playfair-regular.ttf') format('truetype');
+            font-weight: 700;
+            font-style: normal;
+        }
+        
+        
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { overflow: hidden; }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            background-color: #F9F7F2;
+            position: relative;
+            font-family: 'Lato', sans-serif;
+            color: #1A1A1A;
+            padding: 80px;
+            display: flex;
+            gap: 60px;
+        }
+
+        /* Left Column: Title & Insight */
+        .left-col {
+            width: 35%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            border-left: 1px solid #ddd; /* Visual separator on the left since RTL */
+            padding-left: 40px;
+        }
+
+        .subtitle {
+            font-family: 'Lato', sans-serif;
+            font-size: 16px;
+            color: #C67D63;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 56px;
+            line-height: 1.2;
+            color: #1A1A1A;
+            margin-bottom: 40px;
+        }
+
+        .insight-box {
+            background-color: #fff;
+            padding: 30px;
+            border-right: 4px solid #C67D63;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+        }
+
+        .insight-text {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #4A4A4A;
+            font-style: italic;
+        }
+
+        /* Right Column: Trends List */
+        .right-col {
+            width: 65%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .trend-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 25px;
+        }
+
+        .trend-number {
+            font-family: 'Playfair Display', serif;
+            font-size: 42px;
+            color: #C67D63;
+            font-weight: 700;
+            min-width: 60px;
+            line-height: 1;
+            opacity: 0.8;
+        }
+
+        .trend-content {
+            margin-right: 20px; /* Space between number and text in RTL */
+        }
+
+        .trend-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 24px;
+            color: #1A1A1A;
+            margin-bottom: 5px;
+            font-weight: 700;
+        }
+
+        .trend-desc {
+            font-size: 16px;
+            color: #666;
+            line-height: 1.4;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        
+        <div class="left-col">
+            <div>
+                <span class="subtitle">Market Trends</span>
+                <h1>اتجاهات السوق العراقي</h1>
+                <div class="insight-box">
+                    <p class="insight-text">
+                        "يشهد المستهلك العراقي تحولاً جذرياً نحو الوعي الصحي، مدفوعاً بالرغبة في الوقاية والبحث عن الجودة والمصداقية في المنتجات."
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="right-col">
+            <!-- Trend 1 -->
+            <div class="trend-item">
+                <div class="trend-number">01</div>
+                <div class="trend-content">
+                    <h3 class="trend-title">زيادة الوعي الصحي</h3>
+                    <p class="trend-desc">ارتفاع ملحوظ في الاهتمام بالصحة الوقائية وزيادة الدخل المتاح للاستثمار في العافية.</p>
+                </div>
+            </div>
+
+            <!-- Trend 2 -->
+            <div class="trend-item">
+                <div class="trend-number">02</div>
+                <div class="trend-content">
+                    <h3 class="trend-title">المنتجات الطبيعية</h3>
+                    <p class="trend-desc">تفضيل متزايد للمنتجات العضوية والخالية من الإضافات الاصطناعية والمكونات الضارة.</p>
+                </div>
+            </div>
+
+            <!-- Trend 3 -->
+            <div class="trend-item">
+                <div class="trend-number">03</div>
+                <div class="trend-content">
+                    <h3 class="trend-title">التجارة الإلكترونية</h3>
+                    <p class="trend-desc">نمو قنوات البيع عبر الإنترنت حيث يبحث المستهلكون عن الراحة وتنوع الخيارات.</p>
+                </div>
+            </div>
+
+            <!-- Trend 4 -->
+            <div class="trend-item">
+                <div class="trend-number">04</div>
+                <div class="trend-content">
+                    <h3 class="trend-title">التخصيص والحلول الفردية</h3>
+                    <p class="trend-desc">طلب متزايد على التغذية الشخصية والمكملات المصممة خصيصاً لاحتياجات الفرد.</p>
+                </div>
+            </div>
+
+            <!-- Trend 5 -->
+            <div class="trend-item">
+                <div class="trend-number">05</div>
+                <div class="trend-content">
+                    <h3 class="trend-title">اهتمامات صحية محددة</h3>
+                    <p class="trend-desc">تركيز خاص على منتجات دعم المناعة، إدارة الوزن، والجمال من الداخل.</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

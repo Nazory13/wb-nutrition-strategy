@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        @font-face {
+            font-family: 'Cairo';
+            src: url('/home/ubuntu/wb_nutrition_strategy/slides/fonts/cairo-regular.ttf') format('truetype');
+            font-weight: 400;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Cairo';
+            src: url('/home/ubuntu/wb_nutrition_strategy/slides/fonts/cairo-bold.ttf') format('truetype');
+            font-weight: 700;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Lato';
+            src: url('/home/ubuntu/wb_nutrition_strategy/slides/fonts/lato-regular.ttf') format('truetype');
+            font-weight: 400;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Lato';
+            src: url('/home/ubuntu/wb_nutrition_strategy/slides/fonts/lato-bold.ttf') format('truetype');
+            font-weight: 700;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Lato';
+            src: url('/home/ubuntu/wb_nutrition_strategy/slides/fonts/lato-light.ttf') format('truetype');
+            font-weight: 300;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Playfair Display';
+            src: url('/home/ubuntu/wb_nutrition_strategy/slides/fonts/playfair-regular.ttf') format('truetype');
+            font-weight: 400;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Playfair Display';
+            src: url('/home/ubuntu/wb_nutrition_strategy/slides/fonts/playfair-regular.ttf') format('truetype');
+            font-weight: 700;
+            font-style: normal;
+        }
+        
+        
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { overflow: hidden; }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            background-color: #F9F7F2;
+            position: relative;
+            font-family: 'Lato', sans-serif;
+            color: #1A1A1A;
+            padding: 60px 80px 40px; /* keep top padding (60px) but reduce bottom to save height */
+            display: flex;
+            flex-direction: column;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 30px; /* reduced from 50px to pull grid up */
+        }
+
+        .subtitle {
+            font-family: 'Lato', sans-serif;
+            font-size: 16px;
+            color: #C67D63;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 48px;
+            color: #1A1A1A;
+            margin-bottom: 20px;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            gap: 40px 40px; /* keep horizontal gap; vertical gap slightly reduced below */
+            row-gap: 30px; /* reduced from 40px to save vertical space */
+            flex-grow: 1;
+        }
+
+        .segment-card {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            padding: 16px; /* slightly reduced from 20px */
+            border-right: 3px solid #C67D63; /* Accent line on the right for RTL */
+            background-color: rgba(255, 255, 255, 0.5);
+        }
+
+        .icon-wrapper {
+            min-width: 80px;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: 20px;
+        }
+
+        .segment-icon {
+            font-size: 42px;
+            color: #C67D63;
+        }
+
+        .content-wrapper {
+            flex-grow: 1;
+        }
+
+        .segment-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 26px;
+            font-weight: 700;
+            color: #1A1A1A;
+            margin-bottom: 8px;
+        }
+
+        .segment-age {
+            font-family: 'Lato', sans-serif;
+            font-size: 16px;
+            color: #888;
+            margin-bottom: 12px;
+            display: block;
+            font-weight: 700;
+        }
+
+        .segment-needs {
+            font-family: 'Lato', sans-serif;
+            font-size: 18px;
+            color: #4A4A4A;
+            line-height: 1.5;
+        }
+
+        /* Decorative elements */
+        .corner-shape {
+            position: absolute;
+            bottom: -10px; /* slightly less overflow */
+            left: -50px;
+            width: 300px;
+            height: 300px;
+            border: 2px solid rgba(198, 125, 99, 0.2);
+            border-radius: 50%;
+            z-index: -1;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="corner-shape"></div>
+        
+        <div class="header">
+            <span class="subtitle">Target Audience</span>
+            <h1>شرائح الجمهور المستهدف</h1>
+        </div>
+
+        <div class="grid-container">
+            <!-- Segment 1 -->
+            <div class="segment-card">
+                <div class="icon-wrapper">
+                    <i class="fas fa-spa segment-icon"></i>
+                </div>
+                <div class="content-wrapper">
+                    <h3 class="segment-title">النساء المهتمات بالجمال</h3>
+                    <span class="segment-age">25-45 سنة</span>
+                    <p class="segment-needs">الجمال من الداخل (بشرة، شعر)، إدارة الوزن، الحفاظ على الشباب والحيوية.</p>
+                </div>
+            </div>
+
+            <!-- Segment 2 -->
+            <div class="segment-card">
+                <div class="icon-wrapper">
+                    <i class="fas fa-dumbbell segment-icon"></i>
+                </div>
+                <div class="content-wrapper">
+                    <h3 class="segment-title">الرياضيون وهواة اللياقة</h3>
+                    <span class="segment-age">18-40 سنة</span>
+                    <p class="segment-needs">تعزيز الأداء الرياضي، بناء العضلات، الاستشفاء السريع، زيادة الطاقة.</p>
+                </div>
+            </div>
+
+            <!-- Segment 3 -->
+            <div class="segment-card">
+                <div class="icon-wrapper">
+                    <i class="fas fa-heartbeat segment-icon"></i>
+                </div>
+                <div class="content-wrapper">
+                    <h3 class="segment-title">الباحثون عن حلول صحية</h3>
+                    <span class="segment-age">جميع الأعمار</span>
+                    <p class="segment-needs">نقص الفيتامينات، مشاكل المفاصل، ضعف المناعة، مشاكل الجهاز الهضمي.</p>
+                </div>
+            </div>
+
+            <!-- Segment 4 -->
+            <div class="segment-card">
+                <div class="icon-wrapper">
+                    <i class="fas fa-child segment-icon"></i>
+                </div>
+                <div class="content-wrapper">
+                    <h3 class="segment-title">الأمهات والعائلات</h3>
+                    <span class="segment-age">25-45 سنة</span>
+                    <p class="segment-needs">صحة الأطفال، النمو الصحي، تعزيز المناعة للعائلة، منتجات آمنة.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

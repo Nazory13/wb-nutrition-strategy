@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        @font-face {
+            font-family: 'Cairo';
+            src: url('/home/ubuntu/wb_nutrition_strategy/slides/fonts/cairo-regular.ttf') format('truetype');
+            font-weight: 400;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Cairo';
+            src: url('/home/ubuntu/wb_nutrition_strategy/slides/fonts/cairo-bold.ttf') format('truetype');
+            font-weight: 700;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Lato';
+            src: url('/home/ubuntu/wb_nutrition_strategy/slides/fonts/lato-regular.ttf') format('truetype');
+            font-weight: 400;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Lato';
+            src: url('/home/ubuntu/wb_nutrition_strategy/slides/fonts/lato-bold.ttf') format('truetype');
+            font-weight: 700;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Lato';
+            src: url('/home/ubuntu/wb_nutrition_strategy/slides/fonts/lato-light.ttf') format('truetype');
+            font-weight: 300;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Playfair Display';
+            src: url('/home/ubuntu/wb_nutrition_strategy/slides/fonts/playfair-regular.ttf') format('truetype');
+            font-weight: 400;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Playfair Display';
+            src: url('/home/ubuntu/wb_nutrition_strategy/slides/fonts/playfair-regular.ttf') format('truetype');
+            font-weight: 700;
+            font-style: normal;
+        }
+        
+        
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { overflow: hidden; }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px; /* must keep this property */
+            background-color: #F9F7F2;
+            position: relative;
+            font-family: 'Lato', sans-serif;
+            color: #1A1A1A;
+            padding: 80px 80px 10px 80px; /* keep top padding (80px) as required, reduce bottom padding */
+            display: flex;
+            flex-direction: column;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 20px; /* reduced from 60 to save height */
+        }
+
+        .subtitle {
+            font-family: 'Lato', sans-serif;
+            font-size: 16px;
+            color: #C67D63;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 48px;
+            color: #1A1A1A;
+            margin-bottom: 20px;
+        }
+
+        .channels-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-auto-rows: auto; /* let rows size to content instead of stretching */
+            gap: 20px; /* reduced from 50 to save height */
+            /* removed flex-grow so it won't stretch to fill space */
+        }
+
+        .channel-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 8px; /* reduced padding */
+            border: 1px solid transparent; /* Placeholder for alignment */
+        }
+
+        .icon-circle {
+            width: 64px; /* reduced from 80 */
+            height: 64px; /* reduced from 80 */
+            border: 2px solid #C67D63;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 10px; /* reduced */
+            color: #C67D63;
+            font-size: 32px; /* keep icon font size (do not shrink fonts) */
+            transition: all 0.3s ease;
+        }
+
+        .channel-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 24px; /* keep font size */
+            font-weight: 700;
+            color: #1A1A1A;
+            margin-bottom: 10px; /* reduced */
+        }
+
+        .channel-desc {
+            font-family: 'Lato', sans-serif;
+            font-size: 18px; /* keep font size */
+            color: #4A4A4A;
+            line-height: 1.5;
+        }
+
+        /* Decorative element */
+        .center-line {
+            position: absolute;
+            top: 50%;
+            left: 100px;
+            right: 100px;
+            height: 1px;
+            background-color: rgba(0,0,0,0.05);
+            z-index: -1;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="header">
+            <span class="subtitle">Marketing Channels</span>
+            <h1>قنوات التسويق الرئيسية</h1>
+        </div>
+
+        <div class="channels-grid">
+            <!-- Channel 1 -->
+            <div class="channel-card">
+                <div class="icon-circle"><i class="fas fa-bullhorn"></i></div>
+                <h3 class="channel-title">التسويق عبر المؤثرين</h3>
+                <p class="channel-desc">مصداقية تقى الكعبي + 5–10 مؤثرين متخصصين.</p>
+            </div>
+
+            <!-- Channel 2 -->
+            <div class="channel-card">
+                <div class="icon-circle"><i class="fab fa-instagram"></i></div>
+                <h3 class="channel-title">وسائل التواصل الاجتماعي</h3>
+                <p class="channel-desc">تواجد قوي على Instagram و TikTok بمحتوى تفاعلي.</p>
+            </div>
+
+            <!-- Channel 3 -->
+            <div class="channel-card">
+                <div class="icon-circle"><i class="fas fa-ad"></i></div>
+                <h3 class="channel-title">الإعلانات المدفوعة</h3>
+                <p class="channel-desc">حملات Meta Ads مستهدفة وإعادة استهداف.</p>
+            </div>
+
+            <!-- Channel 4 -->
+            <div class="channel-card">
+                <div class="icon-circle"><i class="fas fa-pen-fancy"></i></div>
+                <h3 class="channel-title">التسويق بالمحتوى</h3>
+                <p class="channel-desc">مقالات وفيديوهات تعليمية وجلسات مباشرة.</p>
+            </div>
+
+            <!-- Channel 5 -->
+            <div class="channel-card">
+                <div class="icon-circle"><i class="fas fa-envelope-open-text"></i></div>
+                <h3 class="channel-title">البريد الإلكتروني</h3>
+                <p class="channel-desc">نشرات أسبوعية مخصصة حسب اهتمامات العملاء.</p>
+            </div>
+
+            <!-- Channel 6 -->
+            <div class="channel-card">
+                <div class="icon-circle"><i class="fas fa-search"></i></div>
+                <h3 class="channel-title">تحسين محركات البحث (SEO)</h3>
+                <p class="channel-desc">مدونة تستهدف كلمات مفتاحية صحية لجذب زيارات.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

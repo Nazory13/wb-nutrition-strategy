@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        @font-face {
+            font-family: 'Cairo';
+            src: url('/home/ubuntu/wb_nutrition_strategy/slides/fonts/cairo-regular.ttf') format('truetype');
+            font-weight: 400;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Cairo';
+            src: url('/home/ubuntu/wb_nutrition_strategy/slides/fonts/cairo-bold.ttf') format('truetype');
+            font-weight: 700;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Lato';
+            src: url('/home/ubuntu/wb_nutrition_strategy/slides/fonts/lato-regular.ttf') format('truetype');
+            font-weight: 400;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Lato';
+            src: url('/home/ubuntu/wb_nutrition_strategy/slides/fonts/lato-bold.ttf') format('truetype');
+            font-weight: 700;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Lato';
+            src: url('/home/ubuntu/wb_nutrition_strategy/slides/fonts/lato-light.ttf') format('truetype');
+            font-weight: 300;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Playfair Display';
+            src: url('/home/ubuntu/wb_nutrition_strategy/slides/fonts/playfair-regular.ttf') format('truetype');
+            font-weight: 400;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Playfair Display';
+            src: url('/home/ubuntu/wb_nutrition_strategy/slides/fonts/playfair-regular.ttf') format('truetype');
+            font-weight: 700;
+            font-style: normal;
+        }
+        
+        
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { overflow: hidden; }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px; /* keep this as required */
+            background-color: #F9F7F2;
+            position: relative;
+            font-family: 'Lato', sans-serif;
+            color: #1A1A1A;
+            padding: 80px 40px 20px; /* keep top padding 80px; reduce sides and bottom */
+            display: flex;
+            flex-direction: column;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 20px; /* reduced from 60px */
+        }
+
+        .subtitle {
+            font-family: 'Lato', sans-serif;
+            font-size: 16px;
+            color: #C67D63;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 8px; /* reduced from 15px */
+            display: block;
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 48px;
+            color: #1A1A1A;
+            margin-bottom: 10px; /* reduced from 20px */
+        }
+
+        .timeline-grid {
+            display: flex;
+            justify-content: space-between;
+            gap: 40px;
+            flex-grow: 1;
+            padding-top: 0; /* reduced from 20px */
+        }
+
+        .timeline-col {
+            flex: 1;
+            background-color: #fff;
+            padding: 10px 20px; /* reduced from 40px 30px */
+            position: relative;
+            border-top: 6px solid #C67D63;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .phase-number {
+            font-family: 'Playfair Display', serif;
+            font-size: 60px;
+            color: rgba(198, 125, 99, 0.15);
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-weight: 700;
+            line-height: 1;
+        }
+
+        .time-range {
+            font-family: 'Lato', sans-serif;
+            font-size: 16px;
+            color: #C67D63;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .phase-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 28px;
+            font-weight: 700;
+            color: #1A1A1A;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .milestone-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .milestone-item {
+            margin-bottom: 12px; /* reduced from 20px */
+            position: relative;
+            padding-right: 20px;
+            border-right: 2px solid #eee;
+        }
+
+        .milestone-item::before {
+            content: '';
+            position: absolute;
+            right: -6px; /* Center on the border line */
+            top: 8px;
+            width: 10px;
+            height: 10px;
+            background-color: #C67D63;
+            border-radius: 50%;
+        }
+
+        .milestone-text {
+            font-size: 18px;
+            color: #4A4A4A;
+            line-height: 1.5;
+        }
+
+        .milestone-week {
+            font-size: 14px;
+            color: #888;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="header">
+            <span class="subtitle">Implementation Timeline</span>
+            <h1>الجدول الزمني للتنفيذ (6 أشهر)</h1>
+        </div>
+
+        <div class="timeline-grid">
+            
+            <!-- Phase 1 -->
+            <div class="timeline-col">
+                <span class="phase-number">01</span>
+                <span class="time-range">الأشهر 1-2</span>
+                <h3 class="phase-title">التأسيس والتعاقد</h3>
+                
+                <ul class="milestone-list">
+                    <li class="milestone-item">
+                        <span class="milestone-week">الأسابيع 1-4</span>
+                        <span class="milestone-text">توظيف منسق المشروع وتشكيل الفريق الأساسي.</span>
+                    </li>
+                    <li class="milestone-item">
+                        <span class="milestone-week">الأسابيع 5-6</span>
+                        <span class="milestone-text">تحليل السوق النهائي واختيار قائمة المنتجات الأولية.</span>
+                    </li>
+                    <li class="milestone-item">
+                        <span class="milestone-week">الأسابيع 7-8</span>
+                        <span class="milestone-text">توقيع العقود مع الموردين الرئيسيين وشركات الشحن.</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Phase 2 -->
+            <div class="timeline-col">
+                <span class="phase-number">02</span>
+                <span class="time-range">الأشهر 3-4</span>
+                <h3 class="phase-title">التجهيز والامتثال</h3>
+                
+                <ul class="milestone-list">
+                    <li class="milestone-item">
+                        <span class="milestone-week">الأسابيع 9-12</span>
+                        <span class="milestone-text">البدء في إجراءات التسجيل الصحي للمنتجات المستوردة.</span>
+                    </li>
+                    <li class="milestone-item">
+                        <span class="milestone-week">الأسابيع 13-14</span>
+                        <span class="milestone-text">تطوير وتجهيز قسم التغذية داخل تطبيق Wonder Beauties.</span>
+                    </li>
+                    <li class="milestone-item">
+                        <span class="milestone-week">الأسابيع 15-16</span>
+                        <span class="milestone-text">وصول الدفعة الأولى من المخزون وتخزينها.</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Phase 3 -->
+            <div class="timeline-col">
+                <span class="phase-number">03</span>
+                <span class="time-range">الأشهر 5-6</span>
+                <h3 class="phase-title">التسويق والإطلاق</h3>
+                
+                <ul class="milestone-list">
+                    <li class="milestone-item">
+                        <span class="milestone-week">الأسابيع 17-20</span>
+                        <span class="milestone-text">إنتاج المحتوى التسويقي وإطلاق الحملة التشويقية.</span>
+                    </li>
+                    <li class="milestone-item">
+                        <span class="milestone-week">الأسابيع 21-22</span>
+                        <span class="milestone-text">الإطلاق التجريبي (Soft Launch) للأصدقاء والعائلة.</span>
+                    </li>
+                    <li class="milestone-item">
+                        <span class="milestone-week">الأسابيع 23-24</span>
+                        <span class="milestone-text">الإطلاق الرسمي الكبير وبدء المبيعات.</span>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

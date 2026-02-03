@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        @font-face {
+            font-family: 'Cairo';
+            src: url('/home/ubuntu/wb_nutrition_strategy/slides/fonts/cairo-regular.ttf') format('truetype');
+            font-weight: 400;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Cairo';
+            src: url('/home/ubuntu/wb_nutrition_strategy/slides/fonts/cairo-bold.ttf') format('truetype');
+            font-weight: 700;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Lato';
+            src: url('/home/ubuntu/wb_nutrition_strategy/slides/fonts/lato-regular.ttf') format('truetype');
+            font-weight: 400;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Lato';
+            src: url('/home/ubuntu/wb_nutrition_strategy/slides/fonts/lato-bold.ttf') format('truetype');
+            font-weight: 700;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Lato';
+            src: url('/home/ubuntu/wb_nutrition_strategy/slides/fonts/lato-light.ttf') format('truetype');
+            font-weight: 300;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Playfair Display';
+            src: url('/home/ubuntu/wb_nutrition_strategy/slides/fonts/playfair-regular.ttf') format('truetype');
+            font-weight: 400;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Playfair Display';
+            src: url('/home/ubuntu/wb_nutrition_strategy/slides/fonts/playfair-regular.ttf') format('truetype');
+            font-weight: 700;
+            font-style: normal;
+        }
+    </style>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { overflow: hidden; }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            background-color: #F9F7F2;
+            position: relative;
+            font-family: 'Lato', sans-serif;
+            color: #1A1A1A;
+            padding: 80px 40px 20px 40px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Subtle Background Pattern */
+        .slide-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 10px;
+            background: repeating-linear-gradient(
+                45deg,
+                #C67D63,
+                #C67D63 10px,
+                #F9F7F2 10px,
+                #F9F7F2 20px
+            );
+            opacity: 0.3;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .subtitle {
+            font-family: 'Lato', sans-serif;
+            font-size: 16px;
+            color: #C67D63;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 15px;
+            display: block;
+            font-weight: 700;
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 48px;
+            color: #1A1A1A;
+            margin-bottom: 20px;
+        }
+
+        .projections-container {
+            display: flex;
+            justify-content: space-between;
+            flex-grow: 1;
+            align-items: flex-end;
+            gap: 20px;
+        }
+
+        .year-column {
+            flex: 1;
+            background-color: #fff;
+            padding: 20px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            position: relative;
+            border-top: 5px solid #C67D63;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+            transition: transform 0.3s ease;
+        }
+
+        /* Staggered height effect for visual growth */
+        .year-column:nth-child(1) { height: 70%; }
+        .year-column:nth-child(2) { height: 85%; }
+        .year-column:nth-child(3) { height: 100%; background-color: #1A1A1A; color: #fff; border-top: 5px solid #C67D63; }
+
+        .year-label {
+            font-family: 'Lato', sans-serif;
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            opacity: 0.7;
+        }
+
+        .revenue-amount {
+            font-family: 'Playfair Display', serif;
+            font-size: 56px;
+            font-weight: 700;
+            color: #C67D63;
+            margin-bottom: 10px;
+            line-height: 1;
+        }
+
+        .revenue-label {
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+            opacity: 0.8;
+        }
+
+        .metrics-grid {
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            border-top: 1px solid rgba(0,0,0,0.1);
+            padding-top: 15px;
+        }
+        
+        .year-column:nth-child(3) .metrics-grid {
+            border-top: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .metric-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* SVG Icons for Metrics */
+        .metric-icon {
+            width: 24px;
+            height: 24px;
+            fill: #C67D63;
+            margin-bottom: 5px;
+        }
+
+        .metric-value {
+            font-family: 'Playfair Display', serif;
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 2px;
+        }
+
+        .metric-name {
+            font-size: 12px;
+            opacity: 0.7;
+        }
+
+        .growth-driver {
+            margin-top: auto;
+            padding-top: 15px;
+            font-size: 16px;
+            line-height: 1.5;
+            font-style: italic;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="header">
+            <span class="subtitle">Financial Targets (Contract Clause 7.3)</span>
+            <h1>أهداف المبيعات السنوية (2026-2028)</h1>
+        </div>
+
+        <div class="projections-container">
+            
+            <!-- 2026 -->
+            <div class="year-column">
+                <span class="year-label">FY 2026</span>
+                <span class="revenue-amount">$1M</span>
+                <span class="revenue-label">الهدف السنوي</span>
+                
+                <div class="metrics-grid">
+                    <div class="metric-item">
+                        <!-- Chart Pie Icon -->
+                        <svg class="metric-icon" viewBox="0 0 512 512"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg>
+                        <span class="metric-value">MVP</span>
+                        <span class="metric-name">مرحلة الإطلاق</span>
+                    </div>
+                    <div class="metric-item">
+                        <!-- Percentage Icon -->
+                        <svg class="metric-icon" viewBox="0 0 512 512"><path d="M32 32C14.3 32 0 46.3 0 64S14.3 96 32 96H160V224c0 17.7 14.3 32 32 32s32-14.3 32-32V96h64c17.7 0 32-14.3 32-32s-14.3-32-32-32H32zM64 352c0-17.7-14.3-32-32-32s-32 14.3-32 32v64c0 17.7 14.3 32 32 32H160c17.7 0 32-14.3 32-32s-14.3-32-32-32H64V352zM432 32c-17.7 0-32 14.3-32 32v64H336c-17.7 0-32 14.3-32 32s14.3 32 32 32h64v64c0 17.7 14.3 32 32 32s32-14.3 32-32V224h64c17.7 0 32-14.3 32-32s-14.3-32-32-32H432V64c0-17.7-14.3-32-32-32z"/></svg>
+                        <span class="metric-value">30%</span>
+                        <span class="metric-name">عمولة المبيعات</span>
+                    </div>
+                </div>
+
+                <p class="growth-driver">تحقيق مليون دولار في السنة الأولى من خلال إطلاق المنتجات الأساسية (MVP).</p>
+            </div>
+
+            <!-- 2027 -->
+            <div class="year-column">
+                <span class="year-label">FY 2027</span>
+                <span class="revenue-amount">$7M</span>
+                <span class="revenue-label">الهدف السنوي</span>
+                
+                <div class="metrics-grid">
+                    <div class="metric-item">
+                        <svg class="metric-icon" viewBox="0 0 512 512"><path d="M160 80c0-26.5 21.5-48 48-48h32c26.5 0 48 21.5 48 48V432c0 26.5-21.5 48-48 48H208c-26.5 0-48-21.5-48-48V80zM32 272c0-26.5 21.5-48 48-48h32c26.5 0 48 21.5 48 48V432c0 26.5-21.5 48-48 48H80c-26.5 0-48-21.5-48-48V272zM448 144c0-26.5 21.5-48 48-48h32c26.5 0 48 21.5 48 48V432c0 26.5-21.5 48-48 48H496c-26.5 0-48-21.5-48-48V144z"/></svg>
+                        <span class="metric-value">7x</span>
+                        <span class="metric-name">نمو هائل</span>
+                    </div>
+                    <div class="metric-item">
+                        <svg class="metric-icon" viewBox="0 0 512 512"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg>
+                        <span class="metric-value">Scale</span>
+                        <span class="metric-name">توسع السوق</span>
+                    </div>
+                </div>
+
+                <p class="growth-driver">قفزة نوعية إلى 7 مليون دولار عبر توسيع قاعدة المنتجات ودخول أسواق جديدة.</p>
+            </div>
+
+            <!-- 2028 -->
+            <div class="year-column">
+                <span class="year-label">FY 2028</span>
+                <span class="revenue-amount">$15M</span>
+                <span class="revenue-label">الهدف السنوي</span>
+                
+                <div class="metrics-grid">
+                    <div class="metric-item">
+                        <svg class="metric-icon" viewBox="0 0 512 512"><path d="M4.1 38.2C1.4 34.2 0 29.4 0 24.6C0 11 11 0 24.6 0H133.9c11.2 0 21.7 5.9 27.4 15.5l68.5 114.1c-48.2 6.1-91.3 28.6-123.4 61.9L4.1 38.2zm503.7 0L405.6 191.5c-32.1-33.3-75.2-55.8-123.4-61.9L350.7 15.5C356.5 5.9 366.9 0 378.1 0H487.4C501 0 512 11 512 24.6c0 4.8-1.4 9.6-4.1 13.6zM80 336c0-97.2 78.8-176 176-176s176 78.8 176 176s-78.8 176-176 176S80 433.2 80 336z"/></svg>
+                        <span class="metric-value">Leader</span>
+                        <span class="metric-name">قيادة السوق</span>
+                    </div>
+                    <div class="metric-item">
+                        <svg class="metric-icon" viewBox="0 0 512 512"><path d="M64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zM337 209L209 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L303 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg>
+                        <span class="metric-value">$1.5M</span>
+                        <span class="metric-name">KPI الشخصي</span>
+                    </div>
+                </div>
+
+                <p class="growth-driver">الوصول إلى 15 مليون دولار وتحقيق KPI الشخصي (1.5 مليون) لضمان المكافآت.</p>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        @font-face {
+            font-family: 'Cairo';
+            src: url('/home/ubuntu/wb_nutrition_strategy/slides/fonts/cairo-regular.ttf') format('truetype');
+            font-weight: 400;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Cairo';
+            src: url('/home/ubuntu/wb_nutrition_strategy/slides/fonts/cairo-bold.ttf') format('truetype');
+            font-weight: 700;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Lato';
+            src: url('/home/ubuntu/wb_nutrition_strategy/slides/fonts/lato-regular.ttf') format('truetype');
+            font-weight: 400;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Lato';
+            src: url('/home/ubuntu/wb_nutrition_strategy/slides/fonts/lato-bold.ttf') format('truetype');
+            font-weight: 700;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Lato';
+            src: url('/home/ubuntu/wb_nutrition_strategy/slides/fonts/lato-light.ttf') format('truetype');
+            font-weight: 300;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Playfair Display';
+            src: url('/home/ubuntu/wb_nutrition_strategy/slides/fonts/playfair-regular.ttf') format('truetype');
+            font-weight: 400;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Playfair Display';
+            src: url('/home/ubuntu/wb_nutrition_strategy/slides/fonts/playfair-regular.ttf') format('truetype');
+            font-weight: 700;
+            font-style: normal;
+        }
+        
+        
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { overflow: hidden; }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            background-color: #F9F7F2;
+            position: relative;
+            font-family: 'Lato', sans-serif;
+            color: #1A1A1A;
+            padding: 80px 80px 40px; /* keep top padding (title) but reduce bottom */
+            display: flex;
+            flex-direction: column;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 20px; /* reduced to save vertical space */
+        }
+
+        .subtitle {
+            font-family: 'Lato', sans-serif;
+            font-size: 16px;
+            color: #C67D63;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 48px;
+            color: #1A1A1A;
+            margin-bottom: 12px;
+        }
+
+        .risks-container {
+            display: flex;
+            justify-content: space-between;
+            gap: 30px;
+            flex-grow: 1;
+        }
+
+        .risk-column {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            border-top: 4px solid #C67D63;
+            padding-top: 20px; /* reduced */
+        }
+
+        .risk-header {
+            margin-bottom: 12px;
+        }
+
+        .risk-icon {
+            font-size: 36px;
+            color: #C67D63;
+            margin-bottom: 12px;
+            display: block;
+        }
+
+        .risk-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 28px;
+            font-weight: 700;
+            color: #1A1A1A;
+            margin-bottom: 10px;
+            line-height: 1.3;
+        }
+
+        .risk-desc {
+            font-family: 'Lato', sans-serif;
+            font-size: 18px;
+            color: #4A4A4A;
+            line-height: 1.6;
+            margin-bottom: 10px; /* reduced */
+            flex-grow: 1;
+        }
+
+        .mitigation-box {
+            background-color: rgba(198, 125, 99, 0.1);
+            padding: 12px; /* reduced */
+            position: relative;
+        }
+
+        .mitigation-label {
+            font-family: 'Lato', sans-serif;
+            font-size: 14px;
+            color: #C67D63;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        .mitigation-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 18px;
+            color: #1A1A1A;
+            line-height: 1.5;
+            font-weight: 700;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="header">
+            <span class="subtitle">Risk Analysis</span>
+            <h1>تحليل المخاطر واستراتيجيات التخفيف</h1>
+        </div>
+
+        <div class="risks-container">
+            
+            <!-- Risk 1: Competition -->
+            <div class="risk-column">
+                <i class="fas fa-exclamation-triangle risk-icon"></i>
+                <h3 class="risk-title">المنافسة والمنتجات المقلدة</h3>
+                <p class="risk-desc">السوق العراقي يعاني من انتشار المنتجات المقلدة وحروب الأسعار التي قد تؤثر على الهوامش الربحية.</p>
+                <div class="mitigation-box">
+                    <span class="mitigation-label">استراتيجية التخفيف</span>
+                    <p class="mitigation-text">التركيز المطلق على "الثقة" من خلال العلامة الشخصية لتقى الكعبي وضمان الجودة 100%.</p>
+                </div>
+            </div>
+
+            <!-- Risk 2: Regulation -->
+            <div class="risk-column">
+                <i class="fas fa-balance-scale risk-icon"></i>
+                <h3 class="risk-title">التحديات التنظيمية</h3>
+                <p class="risk-desc">تأخيرات محتملة في تسجيل المنتجات الجديدة لدى وزارة الصحة أو تغييرات مفاجئة في لوائح الاستيراد.</p>
+                <div class="mitigation-box">
+                    <span class="mitigation-label">استراتيجية التخفيف</span>
+                    <p class="mitigation-text">تعيين مسؤول علاقات حكومية متخصص والبدء في إجراءات التسجيل قبل 3 أشهر من الإطلاق.</p>
+                </div>
+            </div>
+
+            <!-- Risk 3: Supply Chain -->
+            <div class="risk-column">
+                <i class="fas fa-shipping-fast risk-icon"></i>
+                <h3 class="risk-title">سلاسل الإمداد والتخزين</h3>
+                <p class="risk-desc">مخاطر تلف المنتجات الحساسة للحرارة أثناء الشحن أو التخزين، وتأخر وصول الشحنات.</p>
+                <div class="mitigation-box">
+                    <span class="mitigation-label">استراتيجية التخفيف</span>
+                    <p class="mitigation-text">التعاقد مع مخازن مكيفة محلياً وتنويع الموردين لضمان استمرارية المخزون.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

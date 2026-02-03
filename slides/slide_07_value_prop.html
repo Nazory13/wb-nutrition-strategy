@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        @font-face {
+            font-family: 'Cairo';
+            src: url('/home/ubuntu/wb_nutrition_strategy/slides/fonts/cairo-regular.ttf') format('truetype');
+            font-weight: 400;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Cairo';
+            src: url('/home/ubuntu/wb_nutrition_strategy/slides/fonts/cairo-bold.ttf') format('truetype');
+            font-weight: 700;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Lato';
+            src: url('/home/ubuntu/wb_nutrition_strategy/slides/fonts/lato-regular.ttf') format('truetype');
+            font-weight: 400;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Lato';
+            src: url('/home/ubuntu/wb_nutrition_strategy/slides/fonts/lato-bold.ttf') format('truetype');
+            font-weight: 700;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Lato';
+            src: url('/home/ubuntu/wb_nutrition_strategy/slides/fonts/lato-light.ttf') format('truetype');
+            font-weight: 300;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Playfair Display';
+            src: url('/home/ubuntu/wb_nutrition_strategy/slides/fonts/playfair-regular.ttf') format('truetype');
+            font-weight: 400;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Playfair Display';
+            src: url('/home/ubuntu/wb_nutrition_strategy/slides/fonts/playfair-regular.ttf') format('truetype');
+            font-weight: 700;
+            font-style: normal;
+        }
+        
+        
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { overflow: hidden; }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            background-color: #F9F7F2;
+            position: relative;
+            font-family: 'Lato', sans-serif;
+            color: #1A1A1A;
+            padding: 80px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .header-section {
+            text-align: center;
+            margin-bottom: 40px; /* reduced from 60px to cut total height by 20px */
+            position: relative;
+        }
+
+        .page-title {
+            font-family: 'Lato', sans-serif;
+            font-size: 16px;
+            color: #C67D63;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .main-statement {
+            font-family: 'Playfair Display', serif;
+            font-size: 36px;
+            line-height: 1.4;
+            color: #1A1A1A;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .pillars-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-grow: 1;
+            border-top: 1px solid #ddd;
+            padding-top: 50px;
+        }
+
+        .pillar-item {
+            flex: 1;
+            padding: 0 20px;
+            text-align: center;
+            position: relative;
+        }
+
+        .pillar-item:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 10px;
+            bottom: 0;
+            width: 1px;
+            background-color: #ddd;
+        }
+
+        .icon-wrapper {
+            font-size: 40px;
+            color: #C67D63;
+            margin-bottom: 25px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .pillar-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 24px;
+            margin-bottom: 15px;
+            color: #1A1A1A;
+            font-weight: 700;
+        }
+
+        .pillar-desc {
+            font-family: 'Lato', sans-serif;
+            font-size: 18px;
+            line-height: 1.6;
+            color: #4A4A4A;
+            font-weight: 300;
+        }
+
+        /* Decorative element */
+        .accent-line {
+            width: 60px;
+            height: 3px;
+            background-color: #C67D63;
+            margin: 30px auto 0;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="header-section">
+            <span class="page-title">عرض القيمة الفريد</span>
+            <h1 class="main-statement">
+                للمستهلك العراقي الذي يبحث عن حلول صحية موثوقة، قسم التغذية في Wonder Beauties هو المنصة الوحيدة التي تجمع بين:
+            </h1>
+            <div class="accent-line"></div>
+        </div>
+
+        <div class="pillars-container">
+            <div class="pillar-item">
+                <div class="icon-wrapper"><i class="fas fa-certificate"></i></div>
+                <h3 class="pillar-title">الثقة والمصداقية</h3>
+                <p class="pillar-desc">الاستفادة من خبرة ومصداقية تقى الكعبي كأخصائية تغذية معروفة لبناء ثقة فورية.</p>
+            </div>
+            
+            <div class="pillar-item">
+                <div class="icon-wrapper"><i class="fas fa-user-md"></i></div>
+                <h3 class="pillar-title">التخصيص والإرشاد</h3>
+                <p class="pillar-desc">تقديم استشارات تغذية شخصية عبر الإنترنت لمساعدة العملاء على اختيار الأنسب.</p>
+            </div>
+
+            <div class="pillar-item">
+                <div class="icon-wrapper"><i class="fas fa-check-circle"></i></div>
+                <h3 class="pillar-title">الجودة والفعالية</h3>
+                <p class="pillar-desc">منتجات منتقاة بعناية ومعتمدة من قبل فريق الخبراء لضمان النتائج.</p>
+            </div>
+
+            <div class="pillar-item">
+                <div class="icon-wrapper"><i class="fas fa-mobile-alt"></i></div>
+                <h3 class="pillar-title">التكامل والراحة</h3>
+                <p class="pillar-desc">تجربة تسوق سلسة ومتكاملة داخل تطبيق Wonder Beauties الموثوق.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

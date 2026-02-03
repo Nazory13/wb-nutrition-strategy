@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        @font-face {
+            font-family: 'Cairo';
+            src: url('/home/ubuntu/wb_nutrition_strategy/slides/fonts/cairo-regular.ttf') format('truetype');
+            font-weight: 400;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Cairo';
+            src: url('/home/ubuntu/wb_nutrition_strategy/slides/fonts/cairo-bold.ttf') format('truetype');
+            font-weight: 700;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Lato';
+            src: url('/home/ubuntu/wb_nutrition_strategy/slides/fonts/lato-regular.ttf') format('truetype');
+            font-weight: 400;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Lato';
+            src: url('/home/ubuntu/wb_nutrition_strategy/slides/fonts/lato-bold.ttf') format('truetype');
+            font-weight: 700;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Lato';
+            src: url('/home/ubuntu/wb_nutrition_strategy/slides/fonts/lato-light.ttf') format('truetype');
+            font-weight: 300;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Playfair Display';
+            src: url('/home/ubuntu/wb_nutrition_strategy/slides/fonts/playfair-regular.ttf') format('truetype');
+            font-weight: 400;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Playfair Display';
+            src: url('/home/ubuntu/wb_nutrition_strategy/slides/fonts/playfair-regular.ttf') format('truetype');
+            font-weight: 700;
+            font-style: normal;
+        }
+        
+        
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { overflow: hidden; }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            background-color: #F9F7F2;
+            position: relative;
+            font-family: 'Lato', sans-serif;
+            color: #1A1A1A;
+            /* keep top padding for title consistency, reduce sides and bottom */
+            padding: 80px 40px 8px 40px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 30px; /* reduced from 60 */
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 10px; /* reduced from 20 */
+        }
+
+        .subtitle {
+            font-family: 'Lato', sans-serif;
+            font-size: 16px;
+            color: #C67D63;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 8px; /* reduced */
+            display: block;
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 48px;
+            color: #1A1A1A;
+        }
+
+        .content-wrapper {
+            display: flex;
+            flex-grow: 1;
+            gap: 40px; /* reduced horizontal gap */
+        }
+
+        .phase-column {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .phase-header {
+            margin-bottom: 12px; /* reduced from 30 */
+            position: relative;
+        }
+
+        .phase-number {
+            font-family: 'Playfair Display', serif;
+            font-size: 80px;
+            color: rgba(198, 125, 99, 0.15);
+            position: absolute;
+            top: -40px;
+            right: -20px;
+            z-index: 0;
+            font-weight: 700;
+        }
+
+        .phase-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 32px;
+            color: #1A1A1A;
+            position: relative;
+            z-index: 1;
+            margin-bottom: 5px;
+        }
+
+        .phase-time {
+            font-family: 'Lato', sans-serif;
+            font-size: 18px;
+            color: #C67D63;
+            font-weight: 700;
+            display: block;
+            position: relative;
+            z-index: 1;
+        }
+
+        .feature-list {
+            list-style: none;
+        }
+
+        .feature-item {
+            margin-bottom: 12px; /* reduced from 25 */
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .feature-icon {
+            color: #C67D63;
+            font-size: 20px;
+            margin-left: 15px;
+            margin-top: 2px; /* reduced */
+        }
+
+        .feature-content h4 {
+            font-family: 'Playfair Display', serif;
+            font-size: 22px;
+            margin-bottom: 5px;
+            color: #1A1A1A;
+        }
+
+        .feature-content p {
+            font-size: 16px;
+            color: #666;
+            line-height: 1.5;
+        }
+
+        /* Vertical Divider */
+        .divider {
+            width: 1px;
+            background-color: #ddd;
+            align-self: stretch;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="header">
+            <span class="subtitle">Expansion & Leadership</span>
+            <h1>المرحلة الثانية والثالثة</h1>
+        </div>
+
+        <div class="content-wrapper">
+            <!-- Phase 2 Column -->
+            <div class="phase-column">
+                <div class="phase-header">
+                    <span class="phase-number">02</span>
+                    <h2 class="phase-title">التوسع والنمو</h2>
+                    <span class="phase-time">الأشهر 7-18</span>
+                </div>
+                
+                <ul class="feature-list">
+                    <li class="feature-item">
+                        <i class="fas fa-layer-group feature-icon"></i>
+                        <div class="feature-content">
+                            <h4>توسيع المنتجات (50-70)</h4>
+                            <p>إضافة فئات التغذية الرياضية، صحة المرأة، وصحة الأطفال.</p>
+                        </div>
+                    </li>
+                    <li class="feature-item">
+                        <i class="fas fa-tag feature-icon"></i>
+                        <div class="feature-content">
+                            <h4>أول منتج خاص (Private Label)</h4>
+                            <p>تطوير وإطلاق أول منتج يحمل علامة Wonder Beauties.</p>
+                        </div>
+                    </li>
+                    <li class="feature-item">
+                        <i class="fas fa-user-md feature-icon"></i>
+                        <div class="feature-content">
+                            <h4>خدمات متقدمة</h4>
+                            <p>باقة استشارية وخطط تغذية مخصصة مدفوعة.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="divider"></div>
+
+            <!-- Phase 3 Column -->
+            <div class="phase-column">
+                <div class="phase-header">
+                    <span class="phase-number">03</span>
+                    <h2 class="phase-title">الريادة والابتكار</h2>
+                    <span class="phase-time">الأشهر 19-36</span>
+                </div>
+
+                <ul class="feature-list">
+                    <li class="feature-item">
+                        <i class="fas fa-boxes feature-icon"></i>
+                        <div class="feature-content">
+                            <h4>توسع شامل (150+)</h4>
+                            <p>الوصول إلى أكثر من 150 منتجاً مع شراكات حصرية.</p>
+                        </div>
+                    </li>
+                    <li class="feature-item">
+                        <i class="fas fa-flask feature-icon"></i>
+                        <div class="feature-content">
+                            <h4>خط منتجات متكامل</h4>
+                            <p>إطلاق خط من 3-5 منتجات خاصة للاحتياجات الرئيسية.</p>
+                        </div>
+                    </li>
+                    <li class="feature-item">
+                        <i class="fas fa-robot feature-icon"></i>
+                        <div class="feature-content">
+                            <h4>التقنية والمجتمع</h4>
+                            <p>نظام تقييم صحي آلي، برامج عضوية وبودكاست متخصص.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        @font-face {
+            font-family: 'Cairo';
+            src: url('/home/ubuntu/wb_nutrition_strategy/slides/fonts/cairo-regular.ttf') format('truetype');
+            font-weight: 400;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Cairo';
+            src: url('/home/ubuntu/wb_nutrition_strategy/slides/fonts/cairo-bold.ttf') format('truetype');
+            font-weight: 700;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Lato';
+            src: url('/home/ubuntu/wb_nutrition_strategy/slides/fonts/lato-regular.ttf') format('truetype');
+            font-weight: 400;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Lato';
+            src: url('/home/ubuntu/wb_nutrition_strategy/slides/fonts/lato-bold.ttf') format('truetype');
+            font-weight: 700;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Lato';
+            src: url('/home/ubuntu/wb_nutrition_strategy/slides/fonts/lato-light.ttf') format('truetype');
+            font-weight: 300;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Playfair Display';
+            src: url('/home/ubuntu/wb_nutrition_strategy/slides/fonts/playfair-regular.ttf') format('truetype');
+            font-weight: 400;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Playfair Display';
+            src: url('/home/ubuntu/wb_nutrition_strategy/slides/fonts/playfair-regular.ttf') format('truetype');
+            font-weight: 700;
+            font-style: normal;
+        }
+        
+        
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { overflow: hidden; }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            background-color: #F9F7F2;
+            position: relative;
+            font-family: 'Lato', sans-serif;
+            color: #1A1A1A;
+            padding: 80px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 20px; /* reduced to bring content up */
+        }
+
+        .subtitle {
+            font-family: 'Lato', sans-serif;
+            font-size: 16px;
+            color: #C67D63;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 48px;
+            color: #1A1A1A;
+            margin-bottom: 20px;
+        }
+
+        .factors-container {
+            display: flex;
+            flex-grow: 1;
+            gap: 40px; /* reduced horizontal gap */
+            position: relative;
+        }
+
+        /* Vertical Divider */
+        .factors-container::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 1px;
+            background-color: #ddd;
+            transform: translateX(-50%);
+        }
+
+        .column {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start; /* pack items instead of spreading */
+            gap: 12px; /* small vertical gap between items */
+        }
+
+        .factor-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 0; /* handled by column gap */
+        }
+
+        .icon-wrapper {
+            min-width: 60px;
+            height: 60px;
+            background-color: rgba(198, 125, 99, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: 25px;
+            color: #C67D63;
+            font-size: 24px;
+        }
+
+        .content {
+            flex: 1;
+        }
+
+        .factor-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 24px;
+            font-weight: 700;
+            color: #1A1A1A;
+            margin-bottom: 10px;
+        }
+
+        .factor-desc {
+            font-family: 'Lato', sans-serif;
+            font-size: 18px;
+            color: #4A4A4A;
+            line-height: 1.5;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="header">
+            <span class="subtitle">Key Success Factors</span>
+            <h1>عوامل النجاح الرئيسية</h1>
+        </div>
+
+        <div class="factors-container">
+            <!-- Right Column (RTL first) -->
+            <div class="column">
+                <div class="factor-item">
+                    <div class="icon-wrapper"><i class="fas fa-certificate"></i></div>
+                    <div class="content">
+                        <h3 class="factor-title">المصداقية والثقة</h3>
+                        <p class="factor-desc">بناء العلامة التجارية على أساس الخبرة العلمية لتقى الكعبي، مما يميزنا عن المنافسين التجاريين.</p>
+                    </div>
+                </div>
+
+                <div class="factor-item">
+                    <div class="icon-wrapper"><i class="fas fa-user-check"></i></div>
+                    <div class="content">
+                        <h3 class="factor-title">التخصيص</h3>
+                        <p class="factor-desc">الابتعاد عن نهج "مقاس واحد للجميع" وتقديم حلول مخصصة لاحتياجات كل عميل.</p>
+                    </div>
+                </div>
+
+                <div class="factor-item">
+                    <div class="icon-wrapper"><i class="fas fa-star"></i></div>
+                    <div class="content">
+                        <h3 class="factor-title">الجودة الفائقة</h3>
+                        <p class="factor-desc">اختيار صارم للمنتجات والموردين لضمان الفعالية والسلامة، وبناء سمعة لا تشوبها شائبة.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Left Column -->
+            <div class="column">
+                <div class="factor-item">
+                    <div class="icon-wrapper"><i class="fas fa-book-open"></i></div>
+                    <div class="content">
+                        <h3 class="factor-title">المحتوى التعليمي</h3>
+                        <p class="factor-desc">قيادة السوق من خلال التثقيف وليس البيع فقط، مما يبني ولاءً طويل الأمد.</p>
+                    </div>
+                </div>
+
+                <div class="factor-item">
+                    <div class="icon-wrapper"><i class="fas fa-sync-alt"></i></div>
+                    <div class="content">
+                        <h3 class="factor-title">التكامل السلس</h3>
+                        <p class="factor-desc">تجربة مستخدم موحدة داخل تطبيق Wonder Beauties تجمع بين الجمال والصحة.</p>
+                    </div>
+                </div>
+
+                <div class="factor-item">
+                    <div class="icon-wrapper"><i class="fas fa-bolt"></i></div>
+                    <div class="content">
+                        <h3 class="factor-title">المرونة والسرعة</h3>
+                        <p class="factor-desc">القدرة على التكيف السريع مع اتجاهات السوق وردود فعل العملاء (Agility).</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

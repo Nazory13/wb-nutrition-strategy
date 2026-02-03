@@ -1,0 +1,264 @@
+{
+  "project_info": {
+    "title": "Title Slide",
+    "created": 1770065532.4493458,
+    "last_updated": 1770068378.15129,
+    "total_slides": 21
+  },
+  "slides": [
+    {
+      "id": "slide_01_title",
+      "state": "edited",
+      "pageNum": 1
+    },
+    {
+      "id": "slide_02_exec_summary",
+      "state": "edited",
+      "pageNum": 2
+    },
+    {
+      "id": "slide_03_vision_mission",
+      "state": "edited",
+      "pageNum": 3
+    },
+    {
+      "id": "slide_04_market_opp",
+      "state": "edited",
+      "pageNum": 4
+    },
+    {
+      "id": "slide_05_market_trends",
+      "state": "edited",
+      "pageNum": 5
+    },
+    {
+      "id": "slide_06_target_audience",
+      "state": "edited",
+      "pageNum": 6
+    },
+    {
+      "id": "slide_07_value_prop",
+      "state": "edited",
+      "pageNum": 7
+    },
+    {
+      "id": "slide_08_strategic_goals",
+      "state": "edited",
+      "pageNum": 8
+    },
+    {
+      "id": "slide_09_product_strategy",
+      "state": "edited",
+      "pageNum": 9
+    },
+    {
+      "id": "slide_10_phase1_mvp",
+      "state": "edited",
+      "pageNum": 10
+    },
+    {
+      "id": "slide_11_phase2_3",
+      "state": "edited",
+      "pageNum": 11
+    },
+    {
+      "id": "slide_12_product_categories",
+      "state": "edited",
+      "pageNum": 12
+    },
+    {
+      "id": "slide_13_gtm_strategy",
+      "state": "edited",
+      "pageNum": 13
+    },
+    {
+      "id": "slide_14_marketing_channels",
+      "state": "edited",
+      "pageNum": 14
+    },
+    {
+      "id": "slide_15_org_structure",
+      "state": "edited",
+      "pageNum": 15
+    },
+    {
+      "id": "slide_16_financials",
+      "state": "edited",
+      "pageNum": 16
+    },
+    {
+      "id": "slide_17_risk_analysis",
+      "state": "edited",
+      "pageNum": 17
+    },
+    {
+      "id": "slide_18_timeline",
+      "state": "edited",
+      "pageNum": 18
+    },
+    {
+      "id": "slide_19_success_factors",
+      "state": "edited",
+      "pageNum": 19
+    },
+    {
+      "id": "slide_20_next_steps",
+      "state": "edited",
+      "pageNum": 20
+    },
+    {
+      "id": "slide_21_thank_you",
+      "state": "edited",
+      "pageNum": 21
+    }
+  ],
+  "outline": [
+    {
+      "id": "slide_01_title",
+      "title": "Title Slide",
+      "summary": "Title slide introducing the strategy, presenter Tuqa Al-Kaabi, and date.",
+      "image_plan": "",
+      "slide_template_key": ""
+    },
+    {
+      "id": "slide_02_exec_summary",
+      "title": "Executive Summary",
+      "summary": "Overview of the market opportunity, gap in Iraq, WB's advantage, and the $1.5M financial goal.",
+      "image_plan": "",
+      "slide_template_key": ""
+    },
+    {
+      "id": "slide_03_vision_mission",
+      "title": "Vision & Mission",
+      "summary": "Defining the vision to be the trusted destination and the mission to build an integrated nutrition division.",
+      "image_plan": "",
+      "slide_template_key": ""
+    },
+    {
+      "id": "slide_04_market_opp",
+      "title": "Market Opportunity",
+      "summary": "Data on the $4.10B MEA market size and growth, highlighting the shift to natural products in Iraq.",
+      "image_plan": "",
+      "slide_template_key": ""
+    },
+    {
+      "id": "slide_05_market_trends",
+      "title": "Market Trends",
+      "summary": "Key trends in Iraq: health awareness, natural products, online sales, personalization, and specific health interests.",
+      "image_plan": "",
+      "slide_template_key": ""
+    },
+    {
+      "id": "slide_06_target_audience",
+      "title": "Target Audience",
+      "summary": "Four key segments: Beauty/Health Women, Athletes, Health Seekers, and Families/Moms.",
+      "image_plan": "",
+      "slide_template_key": ""
+    },
+    {
+      "id": "slide_07_value_prop",
+      "title": "Unique Value Proposition",
+      "summary": "The unique combination of Trust, Personalization, Quality, and Integration offered by WB Nutrition.",
+      "image_plan": "",
+      "slide_template_key": ""
+    },
+    {
+      "id": "slide_08_strategic_goals",
+      "title": "Strategic Goals",
+      "summary": "Key objectives: $1.5M sales, market leadership, private label products, and community building.",
+      "image_plan": "",
+      "slide_template_key": ""
+    },
+    {
+      "id": "slide_09_product_strategy",
+      "title": "Three-Phase Product Strategy",
+      "summary": "Overview of the 3 phases: MVP (1-6 months), Expansion (7-18 months), and Leadership (19-36 months).",
+      "image_plan": "",
+      "slide_template_key": ""
+    },
+    {
+      "id": "slide_10_phase1_mvp",
+      "title": "Phase 1: MVP Launch",
+      "summary": "Details of Phase 1: 15-20 products across key categories and basic consultation services.",
+      "image_plan": "",
+      "slide_template_key": ""
+    },
+    {
+      "id": "slide_11_phase2_3",
+      "title": "Phase 2 & 3: Expansion & Leadership",
+      "summary": "Details of Phase 2 (Expansion) and Phase 3 (Leadership) including private label and advanced services.",
+      "image_plan": "",
+      "slide_template_key": ""
+    },
+    {
+      "id": "slide_12_product_categories",
+      "title": "Product Categories & Margins",
+      "summary": "Breakdown of product categories, target segments, and expected profit margins (30-55%).",
+      "image_plan": "",
+      "slide_template_key": ""
+    },
+    {
+      "id": "slide_13_gtm_strategy",
+      "title": "Go-to-Market Strategy",
+      "summary": "Three-phase GTM: Pre-launch teaser, Launch week with influencers, and Post-launch growth.",
+      "image_plan": "",
+      "slide_template_key": ""
+    },
+    {
+      "id": "slide_14_marketing_channels",
+      "title": "Marketing Channels",
+      "summary": "Key channels: Influencers, Social Media, Paid Ads, Content Marketing, Email, and SEO.",
+      "image_plan": "",
+      "slide_template_key": ""
+    },
+    {
+      "id": "slide_15_org_structure",
+      "title": "Organizational Structure",
+      "summary": "Team structure led by Tuqa Al-Kaabi and integration with existing WB teams.",
+      "image_plan": "/home/ubuntu/upload/Screenshot2026-02-02at10.18.12PM.png - The image describes the organizational structure and responsibilities, which aligns with the slide's content about organizational structure.",
+      "slide_template_key": ""
+    },
+    {
+      "id": "slide_16_financials",
+      "title": "Financial Projections",
+      "summary": "Revenue forecast reaching $1.5M+ by 2028 with target gross and net margins.",
+      "image_plan": "",
+      "slide_template_key": ""
+    },
+    {
+      "id": "slide_17_risk_analysis",
+      "title": "Risk Analysis",
+      "summary": "Key risks (Competition, Regulation, Supply Chain) and mitigation strategies.",
+      "image_plan": "",
+      "slide_template_key": ""
+    },
+    {
+      "id": "slide_18_timeline",
+      "title": "Implementation Timeline",
+      "summary": "Week-by-week timeline for the first 6 months from hiring to official launch.",
+      "image_plan": "",
+      "slide_template_key": ""
+    },
+    {
+      "id": "slide_19_success_factors",
+      "title": "Key Success Factors",
+      "summary": "Critical factors: Credibility, Personalization, Quality, Content, Integration, and Agility.",
+      "image_plan": "",
+      "slide_template_key": ""
+    },
+    {
+      "id": "slide_20_next_steps",
+      "title": "Next Steps",
+      "summary": "Immediate actions required and commitment to success.",
+      "image_plan": "",
+      "slide_template_key": ""
+    },
+    {
+      "id": "slide_21_thank_you",
+      "title": "Thank You",
+      "summary": "Closing slide with contact information and a final inspiring statement.",
+      "image_plan": "",
+      "slide_template_key": ""
+    }
+  ]
+}

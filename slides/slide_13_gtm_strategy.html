@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        @font-face {
+            font-family: 'Cairo';
+            src: url('/home/ubuntu/wb_nutrition_strategy/slides/fonts/cairo-regular.ttf') format('truetype');
+            font-weight: 400;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Cairo';
+            src: url('/home/ubuntu/wb_nutrition_strategy/slides/fonts/cairo-bold.ttf') format('truetype');
+            font-weight: 700;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Lato';
+            src: url('/home/ubuntu/wb_nutrition_strategy/slides/fonts/lato-regular.ttf') format('truetype');
+            font-weight: 400;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Lato';
+            src: url('/home/ubuntu/wb_nutrition_strategy/slides/fonts/lato-bold.ttf') format('truetype');
+            font-weight: 700;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Lato';
+            src: url('/home/ubuntu/wb_nutrition_strategy/slides/fonts/lato-light.ttf') format('truetype');
+            font-weight: 300;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Playfair Display';
+            src: url('/home/ubuntu/wb_nutrition_strategy/slides/fonts/playfair-regular.ttf') format('truetype');
+            font-weight: 400;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Playfair Display';
+            src: url('/home/ubuntu/wb_nutrition_strategy/slides/fonts/playfair-regular.ttf') format('truetype');
+            font-weight: 700;
+            font-style: normal;
+        }
+    </style>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { overflow: hidden; }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            background-color: #F9F7F2;
+            position: relative;
+            font-family: 'Lato', sans-serif;
+            color: #1A1A1A;
+            padding: 80px 60px 20px 60px; /* reduced bottom padding to save height */
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Subtle Background Pattern */
+        .slide-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 10px;
+            background: repeating-linear-gradient(
+                45deg,
+                #C67D63,
+                #C67D63 10px,
+                #F9F7F2 10px,
+                #F9F7F2 20px
+            );
+            opacity: 0.3;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 20px; /* reduced spacing below header */
+            position: relative;
+            z-index: 2;
+        }
+
+        .subtitle {
+            font-family: 'Lato', sans-serif;
+            font-size: 16px;
+            color: #C67D63;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 10px;
+            display: block;
+            font-weight: 700;
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 48px;
+            color: #1A1A1A;
+            margin-bottom: 10px;
+        }
+
+        .phases-container {
+            display: flex;
+            justify-content: space-between;
+            flex-grow: 1;
+            gap: 30px;
+            position: relative;
+        }
+
+        /* Connecting Line behind columns */
+        .phases-container::before {
+            content: '';
+            position: absolute;
+            top: 60px; /* Align with icons */
+            left: 10%;
+            right: 10%;
+            height: 2px;
+            background-color: #e0e0e0;
+            z-index: 0;
+        }
+
+        .phase-col {
+            flex: 1;
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 18px 15px; /* reduced inner padding */
+            position: relative;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.3s ease;
+            z-index: 1;
+            border-top: 4px solid transparent;
+        }
+
+        .phase-col:nth-child(1) { border-top-color: #C67D63; }
+        .phase-col:nth-child(2) { border-top-color: #1A1A1A; }
+        .phase-col:nth-child(3) { border-top-color: #C67D63; }
+
+        .phase-header {
+            text-align: center;
+            margin-bottom: 12px; /* reduced header spacing */
+        }
+
+        .icon-circle {
+            width: 80px;
+            height: 80px;
+            background-color: #F9F7F2;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 10px;
+            border: 2px solid #fff;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            position: relative;
+        }
+
+        .phase-col:nth-child(2) .icon-circle {
+            background-color: #C67D63;
+        }
+
+        .phase-col:nth-child(2) .icon-circle svg {
+            fill: #fff;
+        }
+
+        /* SVG Icon Styling */
+        .phase-icon-svg {
+            width: 36px;
+            height: 36px;
+            fill: #C67D63;
+        }
+
+        .phase-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 24px;
+            font-weight: 700;
+            color: #1A1A1A;
+            margin-bottom: 5px;
+        }
+
+        .phase-time {
+            font-family: 'Lato', sans-serif;
+            font-size: 14px;
+            color: #888;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 700;
+            background-color: #f0f0f0;
+            padding: 4px 12px;
+            border-radius: 20px;
+            display: inline-block;
+        }
+
+        /* Make action list wrap into two columns to save vertical space */
+        .action-list {
+            list-style: none;
+            padding: 0;
+            flex-grow: 1;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px 18px;
+            align-content: flex-start;
+        }
+
+        .action-item {
+            width: calc(50% - 9px);
+            margin-bottom: 12px;
+            position: relative;
+            padding-right: 15px;
+        }
+
+        .action-item:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Custom Bullet using SVG */
+        .bullet-icon {
+            position: absolute;
+            right: 0;
+            top: 6px;
+            width: 8px;
+            height: 8px;
+            fill: #C67D63;
+        }
+
+        .action-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 18px;
+            font-weight: 700;
+            color: #1A1A1A;
+            margin-bottom: 4px;
+            display: block;
+        }
+
+        .action-desc {
+            font-size: 15px;
+            color: #555;
+            line-height: 1.5;
+        }
+
+        /* Step Number Background */
+        .step-bg {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            font-family: 'Playfair Display', serif;
+            font-size: 80px;
+            font-weight: 700;
+            color: rgba(0,0,0,0.03);
+            line-height: 1;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="header">
+            <span class="subtitle">Go-to-Market Strategy</span>
+            <h1>استراتيجية الدخول إلى السوق</h1>
+        </div>
+
+        <div class="phases-container">
+            
+            <!-- Phase 1: Pre-launch -->
+            <div class="phase-col">
+                <div class="step-bg">01</div>
+                <div class="phase-header">
+                    <div class="icon-circle">
+                        <!-- Bullhorn SVG -->
+                        <svg class="phase-icon-svg" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M480 32c-33.8 0-64 24.6-64 64v48c0 8.8-7.2 16-16 16H32c-17.7 0-32 14.3-32 32v64c0 17.7 14.3 32 32 32h368c8.8 0 16 7.2 16 16v48c0 39.4 30.2 64 64 64c17.7 0 32-14.3 32-32V64c0-17.7-14.3-32-32-32zm-96 96H320c-17.7 0-32 14.3-32 32s14.3 32 32 32h64c17.7 0 32-14.3 32-32s-14.3-32-32-32zM32 224h96c17.7 0 32-14.3 32-32s-14.3-32-32-32H32c-17.7 0-32 14.3-32 32s14.3 32 32 32z"/>
+                        </svg>
+                    </div>
+                    <h2 class="phase-title">ما قبل الإطلاق</h2>
+                    <span class="phase-time">6 أسابيع قبل الإطلاق</span>
+                </div>
+                <ul class="action-list">
+                    <li class="action-item">
+                        <svg class="bullet-icon" viewBox="0 0 512 512"><circle cx="256" cy="256" r="256"/></svg>
+                        <span class="action-title">حملة تشويقية</span>
+                        <span class="action-desc">تقى الكعبي تبدأ التلميح لـ "شيء كبير" وتجمع رؤى الجمهور.</span>
+                    </li>
+                    <li class="action-item">
+                        <svg class="bullet-icon" viewBox="0 0 512 512"><circle cx="256" cy="256" r="256"/></svg>
+                        <span class="action-title">قائمة الانتظار</span>
+                        <span class="action-desc">إطلاق صفحة هبوط لجمع بيانات المهتمين مقابل وصول مبكر.</span>
+                    </li>
+                    <li class="action-item">
+                        <svg class="bullet-icon" viewBox="0 0 512 512"><circle cx="256" cy="256" r="256"/></svg>
+                        <span class="action-title">محتوى تعليمي</span>
+                        <span class="action-desc">نشر محتوى مكثف حول المشاكل الصحية لتثقيف السوق.</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Phase 2: Launch -->
+            <div class="phase-col">
+                <div class="step-bg">02</div>
+                <div class="phase-header">
+                    <div class="icon-circle">
+                        <!-- Rocket SVG -->
+                        <svg class="phase-icon-svg" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M19.47 423.8c-12.5-12.5-12.5-32.75 0-45.25l128-128c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-128 128C52.22 436.3 31.97 436.3 19.47 423.8zM297.8 149.8c12.5 12.5 32.75 12.5 45.25 0l128-128c12.5-12.5 12.5-32.75 0-45.25s-32.75-12.5-45.25 0l-128 128C285.3 117 285.3 137.3 297.8 149.8zM504.5 473.5l-140.8-140.8c-5.3-5.3-12.5-8.1-19.9-7.8c-29.6 1.2-57.7-10.7-78.1-31.1c-25.8-25.8-30.8-64.7-15.1-95.6L122.8 316.1l-10.9 43.7c-3.2 12.9 6.4 22.5 19.3 19.3l43.7-10.9l117.9-127.9c30.9-15.7 69.8-10.7 95.6 15.1c20.4 20.4 32.3 48.5 31.1 78.1c-.3 7.4 2.5 14.6 7.8 19.9l140.8 140.8c12.5 12.5 32.75 12.5 45.25 0C517 486.3 517 466 504.5 473.5z"/>
+                        </svg>
+                    </div>
+                    <h2 class="phase-title">الإطلاق الرسمي</h2>
+                    <span class="phase-time">الأسبوع الأول</span>
+                </div>
+                <ul class="action-list">
+                    <li class="action-item">
+                        <svg class="bullet-icon" viewBox="0 0 512 512"><circle cx="256" cy="256" r="256"/></svg>
+                        <span class="action-title">الوصول المبكر</span>
+                        <span class="action-desc">فتح المتجر لقائمة الانتظار قبل 24 ساعة مع خصم خاص.</span>
+                    </li>
+                    <li class="action-item">
+                        <svg class="bullet-icon" viewBox="0 0 512 512"><circle cx="256" cy="256" r="256"/></svg>
+                        <span class="action-title">حملة المؤثرين</span>
+                        <span class="action-desc">تفعيل 5-10 مؤثرين لاستعراض "صندوق الإطلاق".</span>
+                    </li>
+                    <li class="action-item">
+                        <svg class="bullet-icon" viewBox="0 0 512 512"><circle cx="256" cy="256" r="256"/></svg>
+                        <span class="action-title">عروض الإطلاق</span>
+                        <span class="action-desc">خصم 15% لجميع العملاء وعروض "اشترِ واحصل على استشارة".</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Phase 3: Post-launch -->
+            <div class="phase-col">
+                <div class="step-bg">03</div>
+                <div class="phase-header">
+                    <div class="icon-circle">
+                        <!-- Chart Line SVG -->
+                        <svg class="phase-icon-svg" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M64 64c0-17.7-14.3-32-32-32S0 46.3 0 64V400c0 44.2 35.8 80 80 80H480c17.7 0 32-14.3 32-32s-14.3-32-32-32H80c-8.8 0-16-7.2-16-16V64zm406.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L320 210.7l-57.4-57.4c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L240 221.3l57.4 57.4c12.5 12.5 32.8 12.5 45.3 0l128-128z"/>
+                        </svg>
+                    </div>
+                    <h2 class="phase-title">ما بعد الإطلاق</h2>
+                    <span class="phase-time">مستمر</span>
+                </div>
+                <ul class="action-list">
+                    <li class="action-item">
+                        <svg class="bullet-icon" viewBox="0 0 512 512"><circle cx="256" cy="256" r="256"/></svg>
+                        <span class="action-title">قصص النجاح</span>
+                        <span class="action-desc">مشاركة تجارب ونتائج حقيقية للعملاء لبناء الثقة.</span>
+                    </li>
+                    <li class="action-item">
+                        <svg class="bullet-icon" viewBox="0 0 512 512"><circle cx="256" cy="256" r="256"/></svg>
+                        <span class="action-title">برنامج الولاء</span>
+                        <span class="action-desc">إطلاق نظام النقاط والمكافآت للحفاظ على العملاء.</span>
+                    </li>
+                    <li class="action-item">
+                        <svg class="bullet-icon" viewBox="0 0 512 512"><circle cx="256" cy="256" r="256"/></svg>
+                        <span class="action-title">تحسين المحركات (SEO)</span>
+                        <span class="action-desc">بناء مدونة قوية تستهدف الكلمات المفتاحية الصحية.</span>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

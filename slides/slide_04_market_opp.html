@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        @font-face {
+            font-family: 'Cairo';
+            src: url('/home/ubuntu/wb_nutrition_strategy/slides/fonts/cairo-regular.ttf') format('truetype');
+            font-weight: 400;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Cairo';
+            src: url('/home/ubuntu/wb_nutrition_strategy/slides/fonts/cairo-bold.ttf') format('truetype');
+            font-weight: 700;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Lato';
+            src: url('/home/ubuntu/wb_nutrition_strategy/slides/fonts/lato-regular.ttf') format('truetype');
+            font-weight: 400;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Lato';
+            src: url('/home/ubuntu/wb_nutrition_strategy/slides/fonts/lato-bold.ttf') format('truetype');
+            font-weight: 700;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Lato';
+            src: url('/home/ubuntu/wb_nutrition_strategy/slides/fonts/lato-light.ttf') format('truetype');
+            font-weight: 300;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Playfair Display';
+            src: url('/home/ubuntu/wb_nutrition_strategy/slides/fonts/playfair-regular.ttf') format('truetype');
+            font-weight: 400;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Playfair Display';
+            src: url('/home/ubuntu/wb_nutrition_strategy/slides/fonts/playfair-regular.ttf') format('truetype');
+            font-weight: 700;
+            font-style: normal;
+        }
+        
+        
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { overflow: hidden; }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            background-color: #F9F7F2;
+            position: relative;
+            font-family: 'Lato', sans-serif;
+            color: #1A1A1A;
+            padding: 60px 80px 10px; /* keep top padding, reduce bottom */
+            display: flex;
+            flex-direction: column;
+        }
+
+        .header {
+            margin-bottom: 20px; /* reduced from 50 */
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 10px; /* reduced */
+        }
+
+        .subtitle {
+            font-family: 'Lato', sans-serif;
+            font-size: 18px;
+            color: #C67D63;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 48px;
+            color: #1A1A1A;
+        }
+
+        .stats-container {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px; /* reduced from 50 */
+        }
+
+        .stat-box {
+            flex: 1;
+            padding: 10px; /* reduced from 20 */
+            border-right: 1px solid #e0e0e0;
+        }
+        
+        .stat-box:last-child {
+            border-right: none;
+        }
+
+        .stat-number {
+            font-family: 'Playfair Display', serif;
+            font-size: 64px;
+            color: #C67D63;
+            font-weight: 700;
+            line-height: 1;
+            margin-bottom: 8px; /* reduced from 15 */
+            display: block;
+        }
+
+        .stat-label {
+            font-size: 18px;
+            color: #4A4A4A;
+            font-weight: 700;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .stat-desc {
+            font-size: 16px;
+            color: #666;
+            line-height: 1.4;
+        }
+
+        .iraq-market-box {
+            background-color: #fff;
+            padding: 20px; /* reduced from 30 */
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px; /* reduced from 40 */
+            border-right: 5px solid #1A1A1A;
+        }
+
+        .iraq-icon {
+            font-size: 40px;
+            color: #1A1A1A;
+            margin-left: 30px;
+        }
+
+        .iraq-content h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 24px;
+            margin-bottom: 5px;
+        }
+
+        .iraq-content p {
+            font-size: 18px;
+            color: #4A4A4A;
+        }
+
+        .insight-box {
+            background-color: rgba(198, 125, 99, 0.1);
+            padding: 18px; /* slightly reduced */
+            border-radius: 0; /* No rounded corners */
+            position: relative;
+        }
+
+        .insight-text {
+            font-size: 20px;
+            color: #1A1A1A;
+            font-style: italic;
+            text-align: center;
+            font-family: 'Playfair Display', serif;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="header">
+            <span class="subtitle">Market Opportunity</span>
+            <h1>سوق المكملات الغذائية ينمو بسرعة</h1>
+        </div>
+
+        <div class="stats-container">
+            <div class="stat-box">
+                <span class="stat-number">$4.10B</span>
+                <span class="stat-label">حجم السوق 2024</span>
+                <span class="stat-desc">سوق المكملات الغذائية في الشرق الأوسط وأفريقيا</span>
+            </div>
+            <div class="stat-box">
+                <span class="stat-number">10.3%</span>
+                <span class="stat-label">معدل النمو السنوي</span>
+                <span class="stat-desc">نمو متسارع متوقع حتى عام 2031</span>
+            </div>
+            <div class="stat-box">
+                <span class="stat-number">$4.67B</span>
+                <span class="stat-label">الحجم المتوقع 2031</span>
+                <span class="stat-desc">فرصة هائلة للتوسع والاستحواذ على حصة سوقية</span>
+            </div>
+        </div>
+
+        <div class="iraq-market-box">
+            <i class="fas fa-map-marker-alt iraq-icon"></i>
+            <div class="iraq-content">
+                <h3>السوق العراقي واعد</h3>
+                <p>سوق الجمال والعناية الشخصية في العراق سيصل إلى <strong>429 مليون دولار</strong> في 2025</p>
+            </div>
+        </div>
+
+        <div class="insight-box">
+            <p class="insight-text">"السوق العراقي يشهد تحولاً كبيراً نحو المنتجات الطبيعية والصحية، مع وجود فجوة واضحة في المنصات الموثوقة التي تقدم هذه المنتجات."</p>
+        </div>
+    </div>
+</body>
+</html>

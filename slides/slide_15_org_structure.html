@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        @font-face {
+            font-family: 'Cairo';
+            src: url('/home/ubuntu/wb_nutrition_strategy/slides/fonts/cairo-regular.ttf') format('truetype');
+            font-weight: 400;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Cairo';
+            src: url('/home/ubuntu/wb_nutrition_strategy/slides/fonts/cairo-bold.ttf') format('truetype');
+            font-weight: 700;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Lato';
+            src: url('/home/ubuntu/wb_nutrition_strategy/slides/fonts/lato-regular.ttf') format('truetype');
+            font-weight: 400;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Lato';
+            src: url('/home/ubuntu/wb_nutrition_strategy/slides/fonts/lato-bold.ttf') format('truetype');
+            font-weight: 700;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Lato';
+            src: url('/home/ubuntu/wb_nutrition_strategy/slides/fonts/lato-light.ttf') format('truetype');
+            font-weight: 300;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Playfair Display';
+            src: url('/home/ubuntu/wb_nutrition_strategy/slides/fonts/playfair-regular.ttf') format('truetype');
+            font-weight: 400;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Playfair Display';
+            src: url('/home/ubuntu/wb_nutrition_strategy/slides/fonts/playfair-regular.ttf') format('truetype');
+            font-weight: 700;
+            font-style: normal;
+        }
+        
+        
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { overflow: hidden; }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px; /* must keep */
+            background-color: #F9F7F2;
+            position: relative;
+            font-family: 'Lato', sans-serif;
+            color: #1A1A1A;
+            padding: 80px 40px 40px; /* keep top padding 80px, reduce sides and bottom */
+            display: flex;
+            flex-direction: column;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 20px; /* reduced from 50px */
+        }
+
+        .subtitle {
+            font-family: 'Lato', sans-serif;
+            font-size: 16px;
+            color: #C67D63;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 48px;
+            color: #1A1A1A;
+            margin-bottom: 20px;
+        }
+
+        .org-chart {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            flex-grow: 1;
+            padding-top: 8px; /* reduced from 20px */
+        }
+
+        /* Box Styles */
+        .node-box {
+            padding: 12px 30px; /* reduced from 20px 40px */
+            text-align: center;
+            position: relative;
+            min-width: 250px;
+        }
+
+        .director-box {
+            background-color: #C67D63;
+            color: #fff;
+            margin-bottom: 20px; /* reduced from 60px */
+            z-index: 2;
+        }
+
+        .coordinator-box {
+            background-color: #fff;
+            border: 2px solid #C67D63;
+            color: #1A1A1A;
+            margin-bottom: 20px; /* reduced from 60px */
+            z-index: 2;
+        }
+
+        .role-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        .role-name {
+            font-family: 'Lato', sans-serif;
+            font-size: 18px;
+            font-weight: 300;
+            display: block;
+        }
+
+        /* Connecting Lines */
+        .line-vertical {
+            position: absolute;
+            width: 2px;
+            background-color: #C67D63;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1;
+        }
+
+        /* Line from Director to Coordinator */
+        .line-1 {
+            top: 100%;
+            height: 20px; /* reduced from 60px */
+        }
+
+        /* Line from Coordinator to Teams */
+        .line-2 {
+            top: 100%;
+            height: 20px; /* reduced from 30px */
+        }
+
+        /* Horizontal Line for Teams */
+        .teams-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px; /* reduced gap */
+            position: relative;
+            padding-top: 10px; /* reduced from 30px */
+            width: 100%;
+        }
+
+        .teams-connector {
+            position: absolute;
+            top: 0;
+            left: 15%; /* keep */
+            right: 15%;
+            height: 2px;
+            background-color: #C67D63;
+        }
+
+        .teams-connector::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            height: 20px; /* reduced from 30px */
+            width: 2px;
+            background-color: #C67D63;
+            transform: translateY(-100%);
+        }
+
+        .team-box {
+            background-color: #fff;
+            border-top: 4px solid #1A1A1A;
+            padding: 12px; /* reduced from 20px */
+            flex: 1;
+            text-align: center;
+            position: relative;
+            max-width: 220px;
+        }
+
+        /* Vertical line connecting team box to horizontal line */
+        .team-box::before {
+            content: '';
+            position: absolute;
+            top: -20px; /* reduced from -30px */
+            left: 50%;
+            width: 2px;
+            height: 20px; /* reduced from 30px */
+            background-color: #C67D63;
+            transform: translateX(-50%);
+        }
+
+        .team-icon {
+            font-size: 24px;
+            color: #1A1A1A;
+            margin-bottom: 12px; /* slightly reduced */
+        }
+
+        .team-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 8px; /* slightly reduced */
+            color: #1A1A1A;
+        }
+
+        .team-desc {
+            font-size: 14px;
+            color: #666;
+            line-height: 1.4;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="header">
+            <span class="subtitle">Organizational Structure</span>
+            <h1>الهيكل التنظيمي والفريق</h1>
+        </div>
+
+        <div class="org-chart">
+            <!-- Level 1: Director -->
+            <div class="node-box director-box">
+                <span class="role-title">المدير التنفيذي للقسم</span>
+                <span class="role-name">تقى الكعبي</span>
+                <div class="line-vertical line-1"></div>
+            </div>
+
+            <!-- Level 2: Coordinator -->
+            <div class="node-box coordinator-box">
+                <span class="role-title">منسق المشروع</span>
+                <span class="role-name">Project Coordinator</span>
+                <div class="line-vertical line-2"></div>
+            </div>
+
+            <!-- Level 3: Functional Teams -->
+            <div class="teams-container">
+                <div class="teams-connector"></div>
+
+                <div class="team-box">
+                    <i class="fas fa-laptop-code team-icon"></i>
+                    <h3 class="team-name">المنتج والتقنية</h3>
+                    <p class="team-desc">بناء رحلة المستخدم وتطوير المتجر</p>
+                </div>
+
+                <div class="team-box">
+                    <i class="fas fa-bullhorn team-icon"></i>
+                    <h3 class="team-name">التسويق والمؤثرين</h3>
+                    <p class="team-desc">إدارة الحملات والتعاون مع المؤثرين</p>
+                </div>
+
+                <div class="team-box">
+                    <i class="fas fa-headset team-icon"></i>
+                    <h3 class="team-name">تجربة العملاء</h3>
+                    <p class="team-desc">تقديم الاستشارات ودعم العملاء</p>
+                </div>
+
+                <div class="team-box">
+                    <i class="fas fa-calculator team-icon"></i>
+                    <h3 class="team-name">المالية والموارد</h3>
+                    <p class="team-desc">الميزانية، التوظيف، والعمليات</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
