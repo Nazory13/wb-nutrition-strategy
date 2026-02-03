@@ -52,42 +52,41 @@
         body { overflow: hidden; }
         .slide-container {
             width: 1280px;
-            min-height: 720px; /* keep as required */
+            min-height: 720px;
             background-color: #F9F7F2;
             position: relative;
             font-family: 'Lato', sans-serif;
             color: #1A1A1A;
-            /* keep upper padding for title consistency */
-            padding: 80px 60px 20px; /* top 80px preserved, right 60px, bottom reduced to cut total height */
+            padding: 60px 50px 15px;
             display: flex;
             flex-direction: column;
         }
 
         .header {
-            margin-bottom: 20px; /* reduced from 50px */
+            margin-bottom: 15px;
             border-bottom: 1px solid #ddd;
-            padding-bottom: 10px; /* reduced from 20px */
+            padding-bottom: 8px;
         }
 
         .subtitle {
             font-family: 'Lato', sans-serif;
-            font-size: 16px;
+            font-size: 14px;
             color: #C67D63;
             text-transform: uppercase;
             letter-spacing: 3px;
-            margin-bottom: 8px;
+            margin-bottom: 6px;
             display: block;
         }
 
         h1 {
             font-family: 'Playfair Display', serif;
-            font-size: 48px;
+            font-size: 40px;
             color: #1A1A1A;
         }
 
         .content-wrapper {
             display: flex;
-            gap: 40px; /* reduced from 60px */
+            gap: 30px;
             flex-grow: 1;
         }
 
@@ -98,12 +97,12 @@
 
         .section-title {
             font-family: 'Playfair Display', serif;
-            font-size: 28px;
+            font-size: 24px;
             color: #1A1A1A;
-            margin-bottom: 20px; /* reduced from 30px */
+            margin-bottom: 12px;
             display: flex;
             align-items: center;
-            gap: 12px;
+            gap: 10px;
         }
 
         .section-title i { color: #C67D63; }
@@ -111,27 +110,27 @@
         .product-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 20px; /* reduced from 30px */
+            gap: 12px;
         }
 
         .product-category {
             background-color: #fff;
-            padding: 16px; /* reduced from 25px */
+            padding: 12px;
             border-right: 4px solid #C67D63;
         }
 
         .cat-title {
             font-family: 'Playfair Display', serif;
-            font-size: 20px;
+            font-size: 17px;
             font-weight: 700;
-            margin-bottom: 8px; /* reduced */
+            margin-bottom: 6px;
             color: #1A1A1A;
         }
 
         .cat-items {
-            font-size: 16px;
+            font-size: 14px;
             color: #666;
-            line-height: 1.5;
+            line-height: 1.4;
         }
 
         /* Right Column: Services */
@@ -139,27 +138,27 @@
             flex: 2;
             display: flex;
             flex-direction: column;
-            gap: 18px; /* reduced from 30px */
+            gap: 12px;
         }
 
         .service-card {
             background-color: rgba(198, 125, 99, 0.1);
-            padding: 18px; /* reduced from 30px */
+            padding: 14px;
             flex: 1;
         }
 
         .service-title {
             font-family: 'Playfair Display', serif;
-            font-size: 22px;
+            font-size: 18px;
             font-weight: 700;
-            margin-bottom: 10px; /* reduced */
+            margin-bottom: 8px;
             color: #1A1A1A;
         }
 
         .service-desc {
-            font-size: 16px;
+            font-size: 14px;
             color: #4A4A4A;
-            line-height: 1.6;
+            line-height: 1.5;
         }
 
     </style>
@@ -175,23 +174,23 @@
             
             <!-- Products Section -->
             <div class="products-col">
-                <h2 class="section-title"><i class="fas fa-box-open"></i> المنتجات (15-20 منتج)</h2>
+                <h2 class="section-title"><i class="fas fa-box-open"></i> المنتجات</h2>
                 <div class="product-grid">
                     <div class="product-category">
+                        <h3 class="cat-title">مكملات الفيتامينات والمعادن</h3>
+                        <p class="cat-items">زنك، حديد، كالسيوم، فيتامين د، أوميغا 3، معادن متعددة، سيلينيوم، مغنيسيوم، بي كومبلكس، فوليت، B12</p>
+                    </div>
+                    <div class="product-category">
+                        <h3 class="cat-title">مكملات الصحة الهرمونية</h3>
+                        <p class="cat-items">إنوسيتول، فايتكس، CoQ10، Thyroid Support، بربرين</p>
+                    </div>
+                    <div class="product-category">
+                        <h3 class="cat-title">مكملات الجهاز الهضمي</h3>
+                        <p class="cat-items">إنزيمات هاضمة، بروبايوتك، عسل المانوكا، الجلوتامين، أملاح المرارة، زنك كارنوزين</p>
+                    </div>
+                    <div class="product-category">
                         <h3 class="cat-title">مكملات الجمال</h3>
-                        <p class="cat-items">كولاجين، بيوتين، حمض الهيالورونيك، فيتامين E</p>
-                    </div>
-                    <div class="product-category">
-                        <h3 class="cat-title">إدارة الوزن</h3>
-                        <p class="cat-items">حارقات دهون طبيعية، مثبطات الشهية، بدائل الوجبات</p>
-                    </div>
-                    <div class="product-category">
-                        <h3 class="cat-title">الصحة العامة</h3>
-                        <p class="cat-items">فيتامين د، فيتامين سي، أوميغا 3، ملتي فيتامين للنساء</p>
-                    </div>
-                    <div class="product-category">
-                        <h3 class="cat-title">الطاقة والنشاط</h3>
-                        <p class="cat-items">فيتامين ب المركب، مكملات الطاقة الطبيعية</p>
+                        <p class="cat-items">جلوتاثايون، NAC، كولاجين، مكملات الشعر</p>
                     </div>
                 </div>
             </div>
@@ -200,11 +199,15 @@
             <div class="services-col">
                 <div class="service-card">
                     <h3 class="service-title"><i class="fas fa-user-md" style="color:#C67D63; margin-left:10px;"></i> الاستشارات</h3>
-                    <p class="service-desc">إطلاق خدمة الاستشارة الغذائية الأساسية عبر الإنترنت (مدفوعة) لتقييم الاحتياجات وتقديم التوصيات.</p>
+                    <p class="service-desc">إطلاق خدمة الاستشارة الغذائية عبر الإنترنت (مدفوعة) لتقييم الاحتياجات وتقديم التوصيات المخصصة.</p>
                 </div>
                 <div class="service-card">
-                    <h3 class="service-title"><i class="fas fa-graduation-cap" style="color:#C67D63; margin-left:10px;"></i> المحتوى التعليمي</h3>
-                    <p class="service-desc">نشر محتوى يومي على وسائل التواصل الاجتماعي يركز على فوائد المكونات وتصحيح المفاهيم.</p>
+                    <h3 class="service-title"><i class="fas fa-clipboard-list" style="color:#C67D63; margin-left:10px;"></i> الأنظمة الغذائية</h3>
+                    <p class="service-desc">تصميم أنظمة غذائية مخصصة تناسب احتياجات كل عميل وأهدافه الصحية.</p>
+                </div>
+                <div class="service-card">
+                    <h3 class="service-title"><i class="fas fa-sync-alt" style="color:#C67D63; margin-left:10px;"></i> المتابعة</h3>
+                    <p class="service-desc">خدمة متابعة دورية لضمان الالتزام بالخطة وتحقيق النتائج المرجوة.</p>
                 </div>
             </div>
 

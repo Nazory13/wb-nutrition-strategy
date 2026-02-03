@@ -52,19 +52,19 @@
         body { overflow: hidden; }
         .slide-container {
             width: 1280px;
-            min-height: 720px; /* keep this as required */
+            min-height: 720px;
             background-color: #F9F7F2;
             position: relative;
             font-family: 'Lato', sans-serif;
             color: #1A1A1A;
-            padding: 80px 40px 20px; /* keep top padding 80px; reduce sides and bottom */
+            padding: 80px 40px 20px;
             display: flex;
             flex-direction: column;
         }
 
         .header {
             text-align: center;
-            margin-bottom: 20px; /* reduced from 60px */
+            margin-bottom: 20px;
         }
 
         .subtitle {
@@ -73,7 +73,7 @@
             color: #C67D63;
             text-transform: uppercase;
             letter-spacing: 3px;
-            margin-bottom: 8px; /* reduced from 15px */
+            margin-bottom: 8px;
             display: block;
         }
 
@@ -81,7 +81,7 @@
             font-family: 'Playfair Display', serif;
             font-size: 48px;
             color: #1A1A1A;
-            margin-bottom: 10px; /* reduced from 20px */
+            margin-bottom: 10px;
         }
 
         .timeline-grid {
@@ -89,13 +89,13 @@
             justify-content: space-between;
             gap: 40px;
             flex-grow: 1;
-            padding-top: 0; /* reduced from 20px */
+            padding-top: 0;
         }
 
         .timeline-col {
             flex: 1;
             background-color: #fff;
-            padding: 10px 20px; /* reduced from 40px 30px */
+            padding: 15px 20px;
             position: relative;
             border-top: 6px solid #C67D63;
             display: flex;
@@ -140,7 +140,7 @@
         }
 
         .milestone-item {
-            margin-bottom: 12px; /* reduced from 20px */
+            margin-bottom: 12px;
             position: relative;
             padding-right: 20px;
             border-right: 2px solid #eee;
@@ -149,7 +149,7 @@
         .milestone-item::before {
             content: '';
             position: absolute;
-            right: -6px; /* Center on the border line */
+            right: -6px;
             top: 8px;
             width: 10px;
             height: 10px;
@@ -176,7 +176,7 @@
     <div class="slide-container">
         <div class="header">
             <span class="subtitle">Implementation Timeline</span>
-            <h1>الجدول الزمني للتنفيذ (6 أشهر)</h1>
+            <h1>الجدول الزمني للتنفيذ (شهر إلى شهرين)</h1>
         </div>
 
         <div class="timeline-grid">
@@ -184,21 +184,21 @@
             <!-- Phase 1 -->
             <div class="timeline-col">
                 <span class="phase-number">01</span>
-                <span class="time-range">الأشهر 1-2</span>
-                <h3 class="phase-title">التأسيس والتعاقد</h3>
+                <span class="time-range">الأسبوع 1-2</span>
+                <h3 class="phase-title">التجهيز والتعاقد</h3>
                 
                 <ul class="milestone-list">
                     <li class="milestone-item">
-                        <span class="milestone-week">الأسابيع 1-4</span>
-                        <span class="milestone-text">توظيف منسق المشروع وتشكيل الفريق الأساسي.</span>
+                        <span class="milestone-week">الأسبوع 1</span>
+                        <span class="milestone-text">جلب المنتجات المتوفرة من المكاتب العلمية.</span>
                     </li>
                     <li class="milestone-item">
-                        <span class="milestone-week">الأسابيع 5-6</span>
-                        <span class="milestone-text">تحليل السوق النهائي واختيار قائمة المنتجات الأولية.</span>
+                        <span class="milestone-week">الأسبوع 1-2</span>
+                        <span class="milestone-text">بناء صفحة ووندر حياة (Wonder Life) على السوشيال ميديا.</span>
                     </li>
                     <li class="milestone-item">
-                        <span class="milestone-week">الأسابيع 7-8</span>
-                        <span class="milestone-text">توقيع العقود مع الموردين الرئيسيين وشركات الشحن.</span>
+                        <span class="milestone-week">الأسبوع 2</span>
+                        <span class="milestone-text">تجهيز المحتوى التسويقي الأولي والصور.</span>
                     </li>
                 </ul>
             </div>
@@ -206,21 +206,21 @@
             <!-- Phase 2 -->
             <div class="timeline-col">
                 <span class="phase-number">02</span>
-                <span class="time-range">الأشهر 3-4</span>
-                <h3 class="phase-title">التجهيز والامتثال</h3>
+                <span class="time-range">الأسبوع 3-4</span>
+                <h3 class="phase-title">الإطلاق والتسويق</h3>
                 
                 <ul class="milestone-list">
                     <li class="milestone-item">
-                        <span class="milestone-week">الأسابيع 9-12</span>
-                        <span class="milestone-text">البدء في إجراءات التسجيل الصحي للمنتجات المستوردة.</span>
+                        <span class="milestone-week">الأسبوع 3</span>
+                        <span class="milestone-text">إطلاق حملة تشويقية على وسائل التواصل الاجتماعي.</span>
                     </li>
                     <li class="milestone-item">
-                        <span class="milestone-week">الأسابيع 13-14</span>
-                        <span class="milestone-text">تطوير وتجهيز قسم التغذية داخل تطبيق Wonder Beauties.</span>
+                        <span class="milestone-week">الأسبوع 3-4</span>
+                        <span class="milestone-text">البدء بالنشر المنتظم والتفاعل مع الجمهور.</span>
                     </li>
                     <li class="milestone-item">
-                        <span class="milestone-week">الأسابيع 15-16</span>
-                        <span class="milestone-text">وصول الدفعة الأولى من المخزون وتخزينها.</span>
+                        <span class="milestone-week">الأسبوع 4</span>
+                        <span class="milestone-text">إطلاق أول إعلان للاستشارات الغذائية.</span>
                     </li>
                 </ul>
             </div>
@@ -228,21 +228,21 @@
             <!-- Phase 3 -->
             <div class="timeline-col">
                 <span class="phase-number">03</span>
-                <span class="time-range">الأشهر 5-6</span>
-                <h3 class="phase-title">التسويق والإطلاق</h3>
+                <span class="time-range">الأسبوع 5-8</span>
+                <h3 class="phase-title">التوسع والنمو</h3>
                 
                 <ul class="milestone-list">
                     <li class="milestone-item">
-                        <span class="milestone-week">الأسابيع 17-20</span>
-                        <span class="milestone-text">إنتاج المحتوى التسويقي وإطلاق الحملة التشويقية.</span>
+                        <span class="milestone-week">الأسبوع 5-6</span>
+                        <span class="milestone-text">توظيف أخصائيين إضافيين حسب الطلب.</span>
                     </li>
                     <li class="milestone-item">
-                        <span class="milestone-week">الأسابيع 21-22</span>
-                        <span class="milestone-text">الإطلاق التجريبي (Soft Launch) للأصدقاء والعائلة.</span>
+                        <span class="milestone-week">الأسبوع 6-7</span>
+                        <span class="milestone-text">توسيع تشكيلة المكملات وطلب كميات أكبر.</span>
                     </li>
                     <li class="milestone-item">
-                        <span class="milestone-week">الأسابيع 23-24</span>
-                        <span class="milestone-text">الإطلاق الرسمي الكبير وبدء المبيعات.</span>
+                        <span class="milestone-week">الأسبوع 8</span>
+                        <span class="milestone-text">تقييم الأداء وتحسين العمليات للمرحلة التالية.</span>
                     </li>
                 </ul>
             </div>

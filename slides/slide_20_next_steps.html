@@ -52,19 +52,19 @@
         body { overflow: hidden; }
         .slide-container {
             width: 1280px;
-            min-height: 720px; /* keep as required */
+            min-height: 720px;
             background-color: #F9F7F2;
             position: relative;
             font-family: 'Lato', sans-serif;
             color: #1A1A1A;
-            padding: 80px 80px 12px 80px; /* keep top padding, reduce bottom to fit */
+            padding: 80px 80px 12px 80px;
             display: flex;
             flex-direction: column;
         }
 
         .header {
             text-align: center;
-            margin-bottom: 20px; /* reduced to save height */
+            margin-bottom: 30px;
         }
 
         .subtitle {
@@ -84,36 +84,29 @@
             margin-bottom: 14px;
         }
 
-        /* Use a two-column grid to reduce vertical length */
         .steps-container {
             max-width: 900px;
             margin: 0 auto;
             width: 100%;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            column-gap: 36px;
-            row-gap: 6px;
-            align-items: start;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
         }
 
         .step-item {
             display: flex;
             align-items: center;
-            padding: 12px 0; /* reduced to save height */
+            padding: 20px 0;
             border-bottom: 1px solid rgba(198, 125, 99, 0.15);
-        }
-
-        .step-item:nth-child(odd) {
-            padding-right: 8px;
         }
 
         .step-number {
             font-family: 'Playfair Display', serif;
-            font-size: 48px;
+            font-size: 56px;
             color: #C67D63;
             font-weight: 700;
-            margin-left: 20px; /* reduced from 40px */
-            min-width: 50px;
+            margin-left: 30px;
+            min-width: 60px;
         }
 
         .step-content {
@@ -125,28 +118,27 @@
             font-size: 28px;
             font-weight: 700;
             color: #1A1A1A;
-            margin-bottom: 6px;
+            margin-bottom: 8px;
         }
 
         .step-desc {
             font-family: 'Lato', sans-serif;
             font-size: 18px;
             color: #4A4A4A;
-            line-height: 1.25;
+            line-height: 1.4;
         }
 
         .commitment-box {
-            grid-column: 1 / -1; /* span both columns */
-            margin-top: 12px; /* reduced to save height */
+            margin-top: 30px;
             text-align: center;
-            padding: 10px;
+            padding: 20px;
             background-color: rgba(198, 125, 99, 0.1);
             border-left: 4px solid #C67D63;
         }
 
         .commitment-text {
             font-family: 'Playfair Display', serif;
-            font-size: 20px;
+            font-size: 22px;
             color: #1A1A1A;
             font-style: italic;
         }
@@ -172,24 +164,16 @@
             <div class="step-item">
                 <span class="step-number">02</span>
                 <div class="step-content">
-                    <h3 class="step-title">توظيف منسق المشروع</h3>
-                    <p class="step-desc">البدء في إجراءات تعيين منسق المشروع بدوام كامل لدعم العمليات.</p>
+                    <h3 class="step-title">تفعيل الشراكات</h3>
+                    <p class="step-desc">التواصل الرسمي مع المكاتب العلمية والموردين لتأمين المنتجات الأولية.</p>
                 </div>
             </div>
 
             <div class="step-item">
                 <span class="step-number">03</span>
                 <div class="step-content">
-                    <h3 class="step-title">تفعيل الشراكات</h3>
-                    <p class="step-desc">التواصل الرسمي مع الموردين المختارين وشركات الشحن لتأمين العقود.</p>
-                </div>
-            </div>
-
-            <div class="step-item">
-                <span class="step-number">04</span>
-                <div class="step-content">
                     <h3 class="step-title">اجتماع الانطلاق (Kick-off)</h3>
-                    <p class="step-desc">عقد اجتماع مع فريق التكنولوجيا والتسويق لوضع الجدول الزمني التفصيلي.</p>
+                    <p class="step-desc">عقد اجتماع مع فريق التسويق والعمليات لوضع الجدول الزمني التفصيلي.</p>
                 </div>
             </div>
 
